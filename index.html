@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jasa Pembuatan Website | Pesan Cepat via WhatsApp</title>
+  <meta name="description" content="Jasa pembuatan website cepat, rapi, dan siap jualan. Pilih paket, isi form, langsung order via WhatsApp." />
+  <style>
+    :root{
+      --bg:#0b1020; --card:#121a33; --muted:#93a4c7; --text:#e8eeff;
+      --brand:#6aa6ff; --brand2:#73ffd5; --border:rgba(255,255,255,.08);
+      --shadow: 0 18px 60px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1100px;
+      --pad:22px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(106,166,255,.25), transparent 60%),
+                  radial-gradient(900px 500px at 80% 10%, rgba(115,255,213,.18), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding: 26px 18px 80px;}
+    header{
+      display:flex; align-items:center; justify-content:space-between;
+      padding: 10px 0 18px;
+    }
+    .logo{
+      display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px;
+    }
+    .badge{
+      width:34px; height:34px; border-radius:12px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow: 0 10px 30px rgba(106,166,255,.25);
+    }
+    nav{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    nav a{
+      padding:8px 12px; border:1px solid transparent; border-radius:999px;
+      color:var(--muted);
+    }
+    nav a:hover{border-color:var(--border); color:var(--text)}
+    .hero{
+      display:grid; grid-template-columns: 1.2fr .8fr; gap:18px;
+      align-items:stretch; margin-top: 10px;
+    }
+    .card{
+      background: rgba(18,26,51,.75);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+    .heroLeft{padding: 28px}
+    h1{font-size: 38px; margin:0 0 10px; line-height:1.15}
+    .sub{color:var(--muted); font-size:16px; margin:0 0 18px}
+    .ctaRow{display:flex; gap:12px; flex-wrap:wrap; margin-top: 14px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      color:var(--text);
+      cursor:pointer;
+      font-weight:650;
+    }
+    .btn.primary{
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      color:#061022;
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .kpis{
+      display:grid; grid-template-columns: repeat(3, 1fr); gap:10px;
+      margin-top: 18px;
+    }
+    .kpi{padding:12px 14px; border-radius:14px; border:1px solid var(--border); background: rgba(255,255,255,.03)}
+    .kpi b{display:block; font-size:18px}
+    .kpi span{color:var(--muted); font-size:12px}
+    .heroRight{padding: 18px}
+    .mini{
+      padding: 16px; border-radius:16px; border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      margin-bottom:12px;
+    }
+    .mini h3{margin:0 0 6px; font-size:15px}
+    .mini p{margin:0; color:var(--muted); font-size:13px}
+    section{margin-top: 18px}
+    .sectionHead{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
+      margin: 28px 0 12px;
+    }
+    .sectionHead h2{margin:0; font-size:20px}
+    .sectionHead p{margin:0; color:var(--muted); font-size:13px}
+    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:12px}
+    .grid2{display:grid; grid-template-columns: repeat(2, 1fr); gap:12px}
+    .pricing .plan{padding: 18px}
+    .plan h3{margin:0 0 4px}
+    .price{font-size:28px; font-weight:900; margin: 6px 0}
+    .muted{color:var(--muted)}
+    ul{margin: 10px 0 0; padding-left: 18px; color:var(--muted)}
+    li{margin:6px 0}
+    .pill{
+      display:inline-block; padding:6px 10px; border-radius:999px; font-size:12px;
+      border:1px solid var(--border); background: rgba(255,255,255,.03); color:var(--muted)
+    }
+    .plan .btn{width:100%; margin-top: 12px}
+    .portfolio .item{padding: 16px}
+    .thumb{
+      height:130px; border-radius:14px; border:1px solid var(--border);
+      background: linear-gradient(135deg, rgba(106,166,255,.18), rgba(115,255,213,.12));
+      display:flex; align-items:center; justify-content:center; color: rgba(232,238,255,.75);
+      font-weight:800;
+    }
+    .item h4{margin: 10px 0 4px}
+    .item p{margin:0; color:var(--muted); font-size:13px}
+    .faq .q{padding: 16px}
+    details{
+      border:1px solid var(--border);
+      border-radius:14px;
+      background: rgba(255,255,255,.03);
+      padding: 12px 14px;
+    }
+    summary{cursor:pointer; font-weight:700}
+    details p{color:var(--muted); margin:10px 0 0}
+    form{padding: 18px}
+    label{display:block; font-size:12px; color:var(--muted); margin: 10px 0 6px}
+    input, select, textarea{
+      width:100%;
+      padding: 12px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,.18);
+      color: var(--text);
+      outline:none;
+    }
+    textarea{min-height: 96px; resize: vertical}
+    .row{display:grid; grid-template-columns: 1fr 1fr; gap:12px}
+    .note{font-size:12px; color:var(--muted); margin-top: 8px}
+    footer{margin-top: 24px; padding-top: 18px; color:var(--muted); font-size:12px; border-top:1px solid var(--border)}
+    .waFloat{
+      position:fixed; right:18px; bottom:18px;
+      padding: 12px 14px; border-radius:999px;
+      background: #25D366; color:#061022; font-weight:800;
+      box-shadow: 0 18px 50px rgba(0,0,0,.35);
+      border: none; cursor:pointer;
+    }
+    @media (max-width: 900px){
+      .hero{grid-template-columns: 1fr}
+      .grid3{grid-template-columns: 1fr}
+      .grid2{grid-template-columns: 1fr}
+      .row{grid-template-columns: 1fr}
+      h1{font-size: 32px}
+      nav{display:none}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">
+        <div class="badge"></div>
+        <div>
+          <div style="font-size:14px; opacity:.9">SON WEB</div>
+          <div style="font-size:12px; color:var(--muted); margin-top:-2px">E-commerce Jasa Website</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#paket">Paket</a>
+        <a href="#porto">Portofolio</a>
+        <a href="#faq">FAQ</a>
+        <a href="#order">Order</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="card heroLeft">
+        <span class="pill">⚡ Cepat • Mobile-friendly • SEO-ready</span>
+        <h1>Jasa Pembuatan Website<br/>untuk Bisnis Kamu</h1>
+        <p class="sub">Pilih paket, isi detail kebutuhan, lalu langsung order via WhatsApp. Bisa landing page, company profile, hingga toko online.</p>
+
+        <div class="ctaRow">
+          <a class="btn primary" href="#paket">Lihat Paket</a>
+          <a class="btn" href="#order">Order Sekarang</a>
+        </div>
+
+        <div class="kpis">
+          <div class="kpi"><b>3–7 hari</b><span>estimasi pengerjaan</span></div>
+          <div class="kpi"><b>1 bulan</b><span>support & revisi</span></div>
+          <div class="kpi"><b>Gratis</b><span>konsultasi awal</span></div>
+        </div>
+      </div>
+
+      <div class="card heroRight">
+        <div class="mini">
+          <h3>✅ Include</h3>
+          <p>Domain & hosting opsional, desain modern, halaman kontak, WhatsApp CTA, basic SEO.</p>
+        </div>
+        <div class="mini">
+          <h3>🧾 Pembayaran</h3>
+          <p>DP 50% untuk mulai. Pelunasan setelah demo.</p>
+        </div>
+        <div class="mini">
+          <h3>📌 Cocok untuk</h3>
+          <p>UMKM, personal brand, jasa profesional, toko online kecil–menengah.</p>
+        </div>
+      </div>
+    </div>
+
+    <section id="paket" class="pricing">
+      <div class="sectionHead">
+        <div>
+          <h2>Paket Harga</h2>
+          <p>Pilih paket sesuai kebutuhan. Bisa custom juga.</p>
+        </div>
+        <div class="pill">💬 Bisa nego untuk project besar</div>
+      </div>
+
+      <div class="grid3">
+        <div class="card plan">
+          <h3>Basic</h3>
+          <div class="muted">Landing page 1 halaman</div>
+          <div class="price">Rp 1.500.000</div>
+          <ul>
+            <li>Desain modern + responsif</li>
+            <li>Form kontak + WA button</li>
+            <li>Basic SEO (title/meta)</li>
+            <li>1x revisi</li>
+          </ul>
+          <button class="btn primary" onclick="pickPlan('Basic', '1500000')">Pilih Basic</button>
+        </div>
+
+        <div class="card plan" style="outline:2px solid rgba(106,166,255,.35)">
+          <h3>Pro <span class="pill" style="margin-left:6px">Paling laris</span></h3>
+          <div class="muted">Company profile 5 halaman</div>
+          <div class="price">Rp 3.500.000</div>
+          <ul>
+            <li>5 halaman (Home, About, Service, Porto, Contact)</li>
+            <li>On-page SEO dasar</li>
+            <li>Integrasi Google Analytics (opsional)</li>
+            <li>3x revisi</li>
+          </ul>
+          <button class="btn primary" onclick="pickPlan('Pro', '3500000')">Pilih Pro</button>
+        </div>
+
+        <div class="card plan">
+          <h3>Business</h3>
+          <div class="muted">Website + fitur jualan</div>
+          <div class="price">Rp 7.500.000</div>
+          <ul>
+            <li>Katalog produk/jasa</li>
+            <li>Cart sederhana (via WA)</li>
+            <li>Admin input katalog (opsional)</li>
+            <li>5x revisi</li>
+          </ul>
+          <button class="btn primary" onclick="pickPlan('Business', '7500000')">Pilih Business</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="porto" class="portfolio">
+      <div class="sectionHead">
+        <div>
+          <h2>Portofolio</h2>
+          <p>Ganti dengan contoh project kamu.</p>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div class="card item">
+          <div class="thumb">Project A</div>
+          <h4>Landing Page Klinik</h4>
+          <p>Fokus booking & WhatsApp CTA.</p>
+        </div>
+        <div class="card item">
+          <div class="thumb">Project B</div>
+          <h4>Company Profile</h4>
+          <p>Tampilan profesional + SEO dasar.</p>
+        </div>
+        <div class="card item">
+          <div class="thumb">Project C</div>
+          <h4>Katalog Produk</h4>
+          <p>Katalog + checkout via WhatsApp.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
+      <div class="sectionHead">
+        <div>
+          <h2>FAQ</h2>
+          <p>Jawaban cepat sebelum order.</p>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div class="q">
+          <details>
+            <summary>Berapa lama pengerjaannya?</summary>
+            <p>Rata-rata 3–7 hari tergantung paket dan kelengkapan materi (logo, teks, gambar).</p>
+          </details>
+        </div>
+        <div class="q">
+          <details>
+            <summary>Kalau belum punya domain & hosting?</summary>
+            <p>Bisa dibantu. Kamu bisa pakai domain sendiri atau dibantu rekomendasi penyedia sesuai budget.</p>
+          </details>
+        </div>
+        <div class="q">
+          <details>
+            <summary>Bisa request desain?</summary>
+            <p>Bisa. Kamu bisa kirim referensi (contoh website) biar arahnya jelas.</p>
+          </details>
+        </div>
+        <div class="q">
+          <details>
+            <summary>Ada garansi?</summary>
+            <p>Support 1 bulan untuk bug fix dan bantuan minor setelah website live.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="order">
+      <div class="sectionHead">
+        <div>
+          <h2>Order Sekarang</h2>
+          <p>Isi data, lalu otomatis terbuka WhatsApp dengan format pesan.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <form id="orderForm">
+          <div class="row">
+            <div>
+              <label>Nama</label>
+              <input required name="nama" placeholder="Nama kamu" />
+            </div>
+            <div>
+              <label>Nomor WhatsApp</label>
+              <input required name="wa" placeholder="08xxxxxxxxxx" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label>Paket</label>
+              <select name="paket" id="paketSelect" required>
+                <option value="Basic">Basic</option>
+                <option value="Pro" selected>Pro</option>
+                <option value="Business">Business</option>
+              </select>
+            </div>
+            <div>
+              <label>Budget (opsional)</label>
+              <input name="budget" placeholder="Contoh: 3-5 juta" />
+            </div>
+          </div>
+
+          <label>Jenis website</label>
+          <select name="jenis" required>
+            <option value="Landing Page">Landing Page</option>
+            <option value="Company Profile">Company Profile</option>
+            <option value="E-commerce / Katalog">E-commerce / Katalog</option>
+            <option value="Lainnya">Lainnya</option>
+          </select>
+
+          <label>Deskripsi kebutuhan</label>
+          <textarea name="kebutuhan" placeholder="Contoh: butuh halaman home, tentang, layanan, portofolio, kontak + tombol WA. Tema warna biru."></textarea>
+
+          <label>Sudah punya domain/hosting?</label>
+          <select name="infra">
+            <option value="Belum">Belum</option>
+            <option value="Sudah domain">Sudah domain</option>
+            <option value="Sudah hosting">Sudah hosting</option>
+            <option value="Sudah domain+hosting">Sudah domain+hosting</option>
+          </select>
+
+          <button class="btn primary" type="submit">Kirim via WhatsApp</button>
+          <div class="note">* Setelah klik, WhatsApp akan terbuka (web/app). Pastikan nomor WA tujuan sudah kamu set di script.</div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Studio Web • Dibuat untuk jualan jasa pembuatan website.  
+      <div style="margin-top:6px">Kontak: <span class="muted">Ganti info ini sesuai brand kamu</span></div>
+    </footer>
+  </div>
+
+  <button class="waFloat" onclick="openWAQuick()">Chat WhatsApp</button>
+
+  <script>
+    // TODO: ganti dengan nomor WA kamu (format internasional tanpa +)
+    // contoh Indonesia: 6281234567890
+    const WA_TARGET = "6281234567890";
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function pickPlan(plan, price){
+      const sel = document.getElementById("paketSelect");
+      sel.value = plan;
+      document.getElementById("order").scrollIntoView({behavior:"smooth"});
+    }
+
+    function encode(s){ return encodeURIComponent(s || ""); }
+
+    function buildMessage(data){
+      return [
+        "Halo, saya mau order jasa pembuatan website.",
+        "",
+        "Nama: " + (data.nama || "-"),
+        "WA: " + (data.wa || "-"),
+        "Paket: " + (data.paket || "-"),
+        "Jenis website: " + (data.jenis || "-"),
+        "Budget: " + (data.budget || "-"),
+        "Domain/Hosting: " + (data.infra || "-"),
+        "",
+        "Kebutuhan:",
+        (data.kebutuhan || "-"),
+        "",
+        "Terima kasih!"
+      ].join("\n");
+    }
+
+    function openWA(text){
+      const url = "https://wa.me/" + WA_TARGET + "?text=" + encode(text);
+      window.open(url, "_blank");
+    }
+
+    function openWAQuick(){
+      openWA("Halo, saya ingin konsultasi pembuatan website.");
+    }
+
+    document.getElementById("orderForm").addEventListener("submit", (e)=>{
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      const data = Object.fromEntries(fd.entries());
+      const msg = buildMessage(data);
+      openWA(msg);
+    });
+  </script>
+</body>
+</html>
