@@ -352,6 +352,22 @@
           </ul>
           <button class="btn primary" onclick="pickPlan('Business', '7500000')">Pilih Business</button>
         </div>
+
+        <!-- TAMBAHAN: Paket Premium Full Custom -->
+        <div class="card plan" style="outline:2px solid rgba(115,255,213,.30)">
+          <h3>Premium <span class="pill" style="margin-left:6px">Full Custom</span></h3>
+          <div class="muted">Web full custom + fitur sesuai kebutuhan client</div>
+          <div class="price">Mulai Rp 12.000.000</div>
+          <ul>
+            <li>Desain UI/UX sesuai brand (custom)</li>
+            <li>Fitur sesuai kebutuhan (booking, membership, dashboard, dll)</li>
+            <li>Revisi fleksibel selama fase desain</li>
+            <li>Optimasi performa + SEO teknis dasar</li>
+            <li>Dokumentasi + training singkat</li>
+          </ul>
+          <button class="btn primary" onclick="pickPlan('Premium (Full Custom)', '12000000')">Konsultasi Premium</button>
+        </div>
+        <!-- /TAMBAHAN -->
       </div>
     </section>
 
@@ -418,6 +434,60 @@
       </div>
     </section>
 
+    <!-- TAMBAHAN: Section Maintenance -->
+    <section id="maintenance" class="maintenance">
+      <div class="sectionHead">
+        <div>
+          <h2>Biaya Maintenance</h2>
+          <p>Pilih maintenance agar website tetap aman, cepat, dan terupdate.</p>
+        </div>
+        <div class="pill">🔧 Optional (tidak wajib)</div>
+      </div>
+
+      <div class="grid3">
+        <div class="card plan">
+          <h3>Basic Care</h3>
+          <div class="muted">Untuk website sederhana</div>
+          <div class="price">Rp 300.000<span style="font-size:14px; font-weight:700">/bulan</span></div>
+          <ul>
+            <li>Backup bulanan</li>
+            <li>Update minor (plugin/theme jika ada)</li>
+            <li>Monitoring uptime</li>
+            <li>Support chat (jam kerja)</li>
+          </ul>
+        </div>
+
+        <div class="card plan" style="outline:2px solid rgba(106,166,255,.35)">
+          <h3>Standard Care</h3>
+          <div class="muted">Paling cocok untuk bisnis</div>
+          <div class="price">Rp 600.000<span style="font-size:14px; font-weight:700">/bulan</span></div>
+          <ul>
+            <li>Backup mingguan</li>
+            <li>Security check + update rutin</li>
+            <li>Performa & basic SEO monitoring</li>
+            <li>Fix bug ringan (jika ada)</li>
+          </ul>
+        </div>
+
+        <div class="card plan">
+          <h3>Premium Care</h3>
+          <div class="muted">Untuk website custom & aktif</div>
+          <div class="price">Rp 1.200.000<span style="font-size:14px; font-weight:700">/bulan</span></div>
+          <ul>
+            <li>Backup harian</li>
+            <li>Prioritas support</li>
+            <li>Monitoring security & performa</li>
+            <li>Perubahan minor (content/update section) hingga 2 jam/bulan</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="muted" style="margin-top:12px; font-size:13px">
+        Catatan: Biaya maintenance tidak termasuk biaya domain/hosting (jika dibayar terpisah) dan tidak termasuk penambahan fitur besar (akan dihitung sebagai project baru).
+      </p>
+    </section>
+    <!-- /TAMBAHAN -->
+
     <section id="order">
       <div class="sectionHead">
         <div>
@@ -449,6 +519,9 @@
                 <option value="Basic">Basic</option>
                 <option value="Pro" selected>Pro</option>
                 <option value="Business">Business</option>
+                <!-- TAMBAHAN: Premium di dropdown -->
+                <option value="Premium (Full Custom)">Premium (Full Custom)</option>
+                <!-- /TAMBAHAN -->
               </select>
             </div>
             <div>
@@ -475,6 +548,16 @@
             <option value="Sudah hosting">Sudah hosting</option>
             <option value="Sudah domain+hosting">Sudah domain+hosting</option>
           </select>
+
+          <!-- TAMBAHAN: Pilihan Maintenance di form -->
+          <label>Maintenance (opsional)</label>
+          <select name="maintenance">
+            <option value="Tidak perlu">Tidak perlu</option>
+            <option value="Basic Care - Rp 300rb/bulan">Basic Care - Rp 300rb/bulan</option>
+            <option value="Standard Care - Rp 600rb/bulan">Standard Care - Rp 600rb/bulan</option>
+            <option value="Premium Care - Rp 1,2jt/bulan">Premium Care - Rp 1,2jt/bulan</option>
+          </select>
+          <!-- /TAMBAHAN -->
 
           <button class="btn primary" type="submit">Kirim via WhatsApp</button>
           <div class="note">* Setelah klik, WhatsApp akan terbuka (web/app). Pastikan nomor WA tujuan sudah kamu set di script.</div>
@@ -515,6 +598,8 @@
         "Jenis website: " + (data.jenis || "-"),
         "Budget: " + (data.budget || "-"),
         "Domain/Hosting: " + (data.infra || "-"),
+        /* TAMBAHAN: maintenance ikut terkirim ke WhatsApp */
+        "Maintenance: " + (data.maintenance || "-"),
         "",
         "Kebutuhan:",
         (data.kebutuhan || "-"),
@@ -542,4 +627,3 @@
   </script>
 </body>
 </html>
-
