@@ -135,7 +135,18 @@
       background: linear-gradient(135deg, rgba(106,166,255,.18), rgba(115,255,213,.12));
       display:flex; align-items:center; justify-content:center; color: rgba(232,238,255,.75);
       font-weight:800;
+      overflow:hidden; /* TAMBAHAN: biar gambar tidak keluar rounded */
     }
+
+    /* TAMBAHAN: Portfolio pakai gambar */
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      border-radius:14px;
+      display:block;
+    }
+
     .item h4{margin: 10px 0 4px}
     .item p{margin:0; color:var(--muted); font-size:13px}
     .faq .q{padding: 16px}
@@ -171,7 +182,7 @@
     }
     @media (max-width: 900px){
       .hero{grid-template-columns: 1fr}
-      .grid3{grid-template-columns: 1fr}
+      .grid3{grid-template-columns: 1 fr}
       .grid2{grid-template-columns: 1fr}
       .row{grid-template-columns: 1fr}
       h1{font-size: 32px}
@@ -301,46 +312,6 @@
       </div>
     </div>
 
-    <!-- TAMBAHAN: Proses Kerja -->
-    <section id="proses" class="process">
-      <div class="sectionHead">
-        <div>
-          <h2>Proses Kerja</h2>
-          <p>Simple, jelas, dan terarah sampai website online.</p>
-        </div>
-      </div>
-
-      <div class="grid3">
-        <div class="card plan">
-          <h3>1) Konsultasi</h3>
-          <div class="muted">Bahas kebutuhan & referensi</div>
-          <ul>
-            <li>Diskusi via WhatsApp</li>
-            <li>Tentukan paket & fitur</li>
-          </ul>
-        </div>
-
-        <div class="card plan">
-          <h3>2) Desain</h3>
-          <div class="muted">Layout + arah visual</div>
-          <ul>
-            <li>Desain sesuai brand</li>
-            <li>Revisi sesuai paket</li>
-          </ul>
-        </div>
-
-        <div class="card plan">
-          <h3>3) Development & Launch</h3>
-          <div class="muted">Build, test, lalu online</div>
-          <ul>
-            <li>Mobile friendly</li>
-            <li>Serah terima + panduan</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <!-- /TAMBAHAN -->
-
     <section id="paket" class="pricing">
       <div class="sectionHead">
         <div>
@@ -393,7 +364,6 @@
           <button class="btn primary" onclick="pickPlan('Business', '7500000')">Pilih Business</button>
         </div>
 
-        <!-- TAMBAHAN: Paket Premium Full Custom -->
         <div class="card plan" style="outline:2px solid rgba(115,255,213,.30)">
           <h3>Premium <span class="pill" style="margin-left:6px">Full Custom</span></h3>
           <div class="muted">Web full custom + fitur sesuai kebutuhan client</div>
@@ -407,7 +377,6 @@
           </ul>
           <button class="btn primary" onclick="pickPlan('Premium (Full Custom)', '12000000')">Konsultasi Premium</button>
         </div>
-        <!-- /TAMBAHAN -->
       </div>
     </section>
 
@@ -421,24 +390,29 @@
 
       <div class="grid3">
         <div class="card item">
-          <div class="thumb">Project A</div>
+          <div class="thumb">
+            <img src="porto1.png" alt="Portofolio Landing Page Klinik">
+          </div>
           <h4>Landing Page Klinik</h4>
           <p>Fokus booking & WhatsApp CTA.</p>
         </div>
         <div class="card item">
-          <div class="thumb">Project B</div>
+          <div class="thumb">
+            <img src="porto2.png" alt="Portofolio Company Profile">
+          </div>
           <h4>Company Profile</h4>
           <p>Tampilan profesional + SEO dasar.</p>
         </div>
         <div class="card item">
-          <div class="thumb">Project C</div>
+          <div class="thumb">
+            <img src="porto3.png" alt="Portofolio Katalog Produk">
+          </div>
           <h4>Katalog Produk</h4>
           <p>Katalog + checkout via WhatsApp.</p>
         </div>
       </div>
     </section>
 
-    <!-- TAMBAHAN: Testimoni -->
     <section id="testimoni" class="testimoni">
       <div class="sectionHead">
         <div>
@@ -467,7 +441,6 @@
         </div>
       </div>
     </section>
-    <!-- /TAMBAHAN -->
 
     <section id="faq" class="faq">
       <div class="sectionHead">
@@ -505,7 +478,6 @@
       </div>
     </section>
 
-    <!-- TAMBAHAN: Section Maintenance -->
     <section id="maintenance" class="maintenance">
       <div class="sectionHead">
         <div>
@@ -557,7 +529,6 @@
         Catatan: Biaya maintenance tidak termasuk biaya domain/hosting (jika dibayar terpisah) dan tidak termasuk penambahan fitur besar (akan dihitung sebagai project baru).
       </p>
     </section>
-    <!-- /TAMBAHAN -->
 
     <section id="order">
       <div class="sectionHead">
