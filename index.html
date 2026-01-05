@@ -301,6 +301,46 @@
       </div>
     </div>
 
+    <!-- TAMBAHAN: Proses Kerja -->
+    <section id="proses" class="process">
+      <div class="sectionHead">
+        <div>
+          <h2>Proses Kerja</h2>
+          <p>Simple, jelas, dan terarah sampai website online.</p>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div class="card plan">
+          <h3>1) Konsultasi</h3>
+          <div class="muted">Bahas kebutuhan & referensi</div>
+          <ul>
+            <li>Diskusi via WhatsApp</li>
+            <li>Tentukan paket & fitur</li>
+          </ul>
+        </div>
+
+        <div class="card plan">
+          <h3>2) Desain</h3>
+          <div class="muted">Layout + arah visual</div>
+          <ul>
+            <li>Desain sesuai brand</li>
+            <li>Revisi sesuai paket</li>
+          </ul>
+        </div>
+
+        <div class="card plan">
+          <h3>3) Development & Launch</h3>
+          <div class="muted">Build, test, lalu online</div>
+          <ul>
+            <li>Mobile friendly</li>
+            <li>Serah terima + panduan</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- /TAMBAHAN -->
+
     <section id="paket" class="pricing">
       <div class="sectionHead">
         <div>
@@ -397,6 +437,37 @@
         </div>
       </div>
     </section>
+
+    <!-- TAMBAHAN: Testimoni -->
+    <section id="testimoni" class="testimoni">
+      <div class="sectionHead">
+        <div>
+          <h2>Testimoni</h2>
+          <p>Beberapa feedback dari klien (contoh).</p>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div class="card plan">
+          <h3>⭐⭐⭐⭐⭐</h3>
+          <div class="muted">“Respons cepat, desain rapi, dan hasilnya sesuai request.”</div>
+          <p class="muted" style="margin-top:10px">— Rina, UMKM Kuliner</p>
+        </div>
+
+        <div class="card plan">
+          <h3>⭐⭐⭐⭐⭐</h3>
+          <div class="muted">“Website jadi lebih dipercaya, customer makin sering chat WA.”</div>
+          <p class="muted" style="margin-top:10px">— Dimas, Jasa Interior</p>
+        </div>
+
+        <div class="card plan">
+          <h3>⭐⭐⭐⭐⭐</h3>
+          <div class="muted">“Pengerjaan cepat, komunikatif, dan after sales oke.”</div>
+          <p class="muted" style="margin-top:10px">— Sari, Personal Brand</p>
+        </div>
+      </div>
+    </section>
+    <!-- /TAMBAHAN -->
 
     <section id="faq" class="faq">
       <div class="sectionHead">
@@ -519,9 +590,7 @@
                 <option value="Basic">Basic</option>
                 <option value="Pro" selected>Pro</option>
                 <option value="Business">Business</option>
-                <!-- TAMBAHAN: Premium di dropdown -->
                 <option value="Premium (Full Custom)">Premium (Full Custom)</option>
-                <!-- /TAMBAHAN -->
               </select>
             </div>
             <div>
@@ -549,7 +618,6 @@
             <option value="Sudah domain+hosting">Sudah domain+hosting</option>
           </select>
 
-          <!-- TAMBAHAN: Pilihan Maintenance di form -->
           <label>Maintenance (opsional)</label>
           <select name="maintenance">
             <option value="Tidak perlu">Tidak perlu</option>
@@ -557,7 +625,6 @@
             <option value="Standard Care - Rp 600rb/bulan">Standard Care - Rp 600rb/bulan</option>
             <option value="Premium Care - Rp 1,2jt/bulan">Premium Care - Rp 1,2jt/bulan</option>
           </select>
-          <!-- /TAMBAHAN -->
 
           <button class="btn primary" type="submit">Kirim via WhatsApp</button>
           <div class="note">* Setelah klik, WhatsApp akan terbuka (web/app). Pastikan nomor WA tujuan sudah kamu set di script.</div>
@@ -598,7 +665,6 @@
         "Jenis website: " + (data.jenis || "-"),
         "Budget: " + (data.budget || "-"),
         "Domain/Hosting: " + (data.infra || "-"),
-        /* TAMBAHAN: maintenance ikut terkirim ke WhatsApp */
         "Maintenance: " + (data.maintenance || "-"),
         "",
         "Kebutuhan:",
