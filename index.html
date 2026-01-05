@@ -30,13 +30,27 @@
       display:flex; align-items:center; justify-content:space-between;
       padding: 10px 0 18px;
     }
-    .logo{
-      display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px;
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-    .badge{
-      width:34px; height:34px; border-radius:12px;
-      background: linear-gradient(135deg, var(--brand), var(--brand2));
-      box-shadow: 0 10px 30px rgba(106,166,255,.25);
+
+    .logo-img {
+      height: 40px;
+      width: auto;
+      border-radius: 10px;
+    }
+
+    .brand {
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .tagline {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: -2px;
     }
     nav{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
     nav a{
@@ -165,10 +179,10 @@
   <div class="wrap">
     <header>
       <div class="logo">
-        <div class="badge"></div>
-        <div>
-          <div style="font-size:14px; opacity:.9">SONAD</div>
-          <div style="font-size:12px; color:var(--muted); margin-top:-2px">Web Development Company</div>
+        <img src="logo.png" alt="SONAD Logo" class="logo-img">
+        <div class="logo-text">
+          <div class="brand">SONAD</div>
+          <div class="tagline">Web Development Company</div>
         </div>
       </div>
       <nav>
@@ -448,4 +462,5 @@
   </script>
 </body>
 </html>
+
 
