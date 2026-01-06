@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jasa Pembuatan Website | Pesan Cepat via WhatsApp</title>
   <meta name="description" content="Jasa pembuatan website cepat, rapi, dan siap jualan. Pilih paket, isi form, langsung order via WhatsApp." />
+
+  <!-- ===============================
+       SEO SHARE (TAMBAHAN SAJA)
+       =============================== -->
+  <meta property="og:title" content="Jasa Pembuatan Website - SONAD" />
+  <meta property="og:description" content="Website modern, mobile-friendly, dan SEO-ready. Konsultasi gratis via WhatsApp." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="logo.png" />
+  <meta name="theme-color" content="#0b1020" />
+  <link rel="icon" href="favicon.png" />
+
   <style>
     :root{
       --bg:#0b1020; --card:#121a33; --muted:#93a4c7; --text:#e8eeff;
@@ -136,6 +147,7 @@
       display:flex; align-items:center; justify-content:center; color: rgba(232,238,255,.75);
       font-weight:800;
       overflow:hidden; /* TAMBAHAN: biar gambar tidak keluar rounded */
+      cursor: zoom-in; /* TAMBAHAN: hint bisa diklik */
     }
 
     /* TAMBAHAN: Portfolio pakai gambar */
@@ -255,160 +267,42 @@
        MOBILE FRIENDLY IMPROVEMENTS
        =============================== */
     @media (max-width: 600px){
-
-      /* Global spacing */
-      .wrap{
-        padding: 20px 14px 120px;
-      }
-
-      /* Header */
-      header{
-        padding: 10px 0;
-      }
-
-      .logo-img{
-        height: 34px;
-      }
-
-      .brand{
-        font-size: 13px;
-      }
-
-      .tagline{
-        font-size: 11px;
-      }
-
-      /* Hero */
-      .hero{
-        gap: 14px;
-      }
-
-      .heroLeft{
-        padding: 20px;
-      }
-
-      h1{
-        font-size: 26px;
-        line-height: 1.2;
-      }
-
-      .sub{
-        font-size: 14px;
-        line-height: 1.5;
-      }
-
-      .ctaRow{
-        gap: 10px;
-      }
-
-      .btn{
-        width: 100%;
-        padding: 14px 16px;
-        font-size: 15px;
-      }
-
-      /* KPI */
-      .kpis{
-        grid-template-columns: 1fr;
-        gap: 8px;
-      }
-
-      .kpi{
-        text-align: center;
-      }
-
-      /* Hero right card */
-      .heroRight{
-        padding: 16px;
-      }
-
-      .mini{
-        padding: 14px;
-      }
-
-      /* Section spacing */
-      section{
-        margin-top: 22px;
-      }
-
-      .sectionHead{
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
-      }
-
-      .sectionHead h2{
-        font-size: 18px;
-      }
-
-      .sectionHead p{
-        font-size: 13px;
-      }
-
-      /* Pricing cards */
-      .pricing .plan{
-        padding: 16px;
-      }
-
-      .price{
-        font-size: 24px;
-      }
-
-      /* Portfolio */
-      .portfolio .item{
-        padding: 14px;
-      }
-
-      .thumb{
-        height: 160px;
-      }
-
-      /* Testimoni */
-      .testimoni .plan{
-        padding: 16px;
-      }
-
-      /* Form */
-      form{
-        padding: 16px;
-      }
-
-      input, select, textarea{
-        font-size: 15px;
-        padding: 14px;
-      }
-
-      label{
-        font-size: 12px;
-      }
-
-      /* Floating WA button */
-      .waFloat{
-        right: 14px;
-        bottom: 14px;
-        font-size: 14px;
-        padding: 14px 18px;
-      }
+      .wrap{ padding: 20px 14px 120px; }
+      header{ padding: 10px 0; }
+      .logo-img{ height: 34px; }
+      .brand{ font-size: 13px; }
+      .tagline{ font-size: 11px; }
+      .hero{ gap: 14px; }
+      .heroLeft{ padding: 20px; }
+      h1{ font-size: 26px; line-height: 1.2; }
+      .sub{ font-size: 14px; line-height: 1.5; }
+      .ctaRow{ gap: 10px; }
+      .btn{ width: 100%; padding: 14px 16px; font-size: 15px; }
+      .kpis{ grid-template-columns: 1fr; gap: 8px; }
+      .kpi{ text-align: center; }
+      .heroRight{ padding: 16px; }
+      .mini{ padding: 14px; }
+      section{ margin-top: 22px; }
+      .sectionHead{ flex-direction: column; align-items: flex-start; gap: 6px; }
+      .sectionHead h2{ font-size: 18px; }
+      .sectionHead p{ font-size: 13px; }
+      .pricing .plan{ padding: 16px; }
+      .price{ font-size: 24px; }
+      .portfolio .item{ padding: 14px; }
+      .thumb{ height: 160px; }
+      .testimoni .plan{ padding: 16px; }
+      form{ padding: 16px; }
+      input, select, textarea{ font-size: 15px; padding: 14px; }
+      label{ font-size: 12px; }
+      .waFloat{ right: 14px; bottom: 14px; font-size: 14px; padding: 14px 18px; }
     }
 
     /* ======================================================
        MOBILE UI UPGRADE (POLISHED) - TAMBAHAN SAJA
-       (Override untuk bikin mobile lebih premium)
        ====================================================== */
     @media (max-width: 600px){
       :root{ --radius:16px; }
-
-      .wrap{
-        padding: 18px 14px 132px;
-      }
-
-      .logo{ gap:10px; }
-      .logo-img{
-        height: 34px;
-        border-radius: 10px;
-      }
-      .brand{ font-size: 13px; }
-      .tagline{ font-size: 11px; }
+      .wrap{ padding: 18px 14px 160px; } /* extra bawah untuk sticky CTA */
 
       .hero{ gap: 12px; }
       .heroLeft{ padding: 18px; }
@@ -427,12 +321,7 @@
         max-width: 100%;
       }
 
-      .pill{
-        font-size: 11px;
-        padding: 6px 10px;
-      }
-
-      /* CTA: 2 tombol sejajar */
+      /* CTA 2 kolom */
       .ctaRow{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -452,7 +341,7 @@
         font-size: 12px !important;
       }
 
-      /* KPI: 2 kolom */
+      /* KPI jadi 2 kolom */
       .kpis{
         grid-template-columns: 1fr 1fr;
         gap: 8px;
@@ -466,33 +355,6 @@
       .kpi b{ font-size: 16px; }
       .kpi span{ font-size: 11px; }
 
-      .card{
-        background: rgba(18,26,51,.72);
-        border: 1px solid rgba(255,255,255,.10);
-      }
-
-      .heroRight{ padding: 14px; }
-      .mini{
-        padding: 14px;
-        border-radius: 14px;
-        margin-bottom: 10px;
-      }
-      .mini h3{ font-size: 14px; }
-      .mini p{ font-size: 12.5px; line-height: 1.5; }
-
-      .sectionHead{
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
-        margin: 22px 0 10px;
-      }
-      .sectionHead h2{ font-size: 18px; }
-      .sectionHead p{ font-size: 12.5px; }
-
-      .pricing .plan{ padding: 16px; }
-      .plan h3{ font-size: 16px; }
-      .price{ font-size: 24px; }
-
       /* Portofolio lebih besar */
       .thumb{
         height: 190px;
@@ -501,33 +363,8 @@
       .thumb img{
         border-radius: 16px;
       }
-      .portfolio .item{ padding: 14px; }
-      .item h4{ font-size: 15px; }
-      .item p{ font-size: 12.5px; }
 
-      details{
-        padding: 12px 12px;
-        border-radius: 14px;
-      }
-      summary{ font-size: 14px; }
-      details p{ font-size: 12.5px; line-height: 1.55; }
-
-      form{ padding: 16px; }
-      label{ font-size: 12px; }
-      input, select, textarea{
-        padding: 14px 14px;
-        font-size: 15px;
-        border-radius: 14px;
-      }
-      textarea{ min-height: 110px; }
-
-      form .btn.primary{
-        width: 100%;
-        min-height: 50px;
-        border-radius: 14px;
-      }
-
-      /* WA float aman di iPhone */
+      /* WA float aman */
       .waFloat{
         right: 14px;
         bottom: calc(14px + env(safe-area-inset-bottom));
@@ -541,6 +378,120 @@
       .ctaRow{ grid-template-columns: 1fr; }
       .kpis{ grid-template-columns: 1fr; }
       h1{ font-size: 24px; }
+    }
+
+    /* ===============================
+       TAMBAHAN: FAST RESPONSE BADGE
+       =============================== */
+    .fastBadge{
+      margin-top: 10px;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 10px;
+      border-radius: 999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* ===============================
+       TAMBAHAN: SECTION PROSES KERJA
+       =============================== */
+    .steps .step{
+      padding: 16px;
+    }
+    .stepNum{
+      display:inline-flex;
+      width:30px;height:30px;
+      border-radius:999px;
+      align-items:center;
+      justify-content:center;
+      font-weight:900;
+      color:#061022;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      margin-bottom:10px;
+    }
+    .step h4{margin: 6px 0 6px}
+    .step p{margin:0;color:var(--muted);font-size:13px}
+
+    /* ===============================
+       TAMBAHAN: MODAL PORTOFOLIO
+       =============================== */
+    .modal{
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.72);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      padding: 16px;
+    }
+    .modal.open{ display:flex; }
+    .modalBox{
+      max-width: 980px;
+      width: 100%;
+      background: rgba(18,26,51,.9);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 30px 90px rgba(0,0,0,.5);
+    }
+    .modalTop{
+      display:flex;
+      justify-content: space-between;
+      align-items:center;
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(255,255,255,.10);
+    }
+    .modalTop b{ font-size: 13px; }
+    .modalClose{
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      border-radius: 12px;
+      padding: 8px 10px;
+      cursor: pointer;
+      font-weight: 800;
+    }
+    .modalImg{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+
+    /* ===============================
+       TAMBAHAN: STICKY CTA MOBILE
+       =============================== */
+    .stickyCta{
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: calc(12px + env(safe-area-inset-bottom));
+      display: none;
+      gap: 10px;
+      z-index: 9998;
+    }
+    .stickyCta a{
+      flex:1;
+      border-radius: 14px;
+      padding: 14px 14px;
+      text-align:center;
+      font-weight: 900;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      box-shadow: 0 16px 40px rgba(0,0,0,.35);
+    }
+    .stickyCta a.primary{
+      border:none;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      color:#061022;
+    }
+    @media (max-width: 600px){
+      .stickyCta{ display:flex; }
+      .waFloat{ display:none; } /* biar ga double CTA */
     }
   </style>
 </head>
@@ -581,6 +532,8 @@
           </p>
         </div>
 
+        <div class="fastBadge">⚡ Fast Response • 08.00–22.00 WIB</div>
+
         <div class="kpis">
           <div class="kpi"><b>3–7 hari</b><span>estimasi pengerjaan</span></div>
           <div class="kpi"><b>1 bulan</b><span>support & revisi</span></div>
@@ -603,6 +556,36 @@
         </div>
       </div>
     </div>
+
+    <!-- ===============================
+         TAMBAHAN: PROSES KERJA
+         =============================== -->
+    <section id="proses" class="steps">
+      <div class="sectionHead">
+        <div>
+          <h2>Proses Kerja</h2>
+          <p>Simple, cepat, dan transparan.</p>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div class="card step">
+          <div class="stepNum">1</div>
+          <h4>Konsultasi & Brief</h4>
+          <p>Kamu ceritakan kebutuhan + kirim referensi. Kami rekomendasikan paket & scope.</p>
+        </div>
+        <div class="card step">
+          <div class="stepNum">2</div>
+          <h4>Desain & Revisi</h4>
+          <p>Kami buat tampilan, kamu review. Revisi sesuai paket sampai siap lanjut develop.</p>
+        </div>
+        <div class="card step">
+          <div class="stepNum">3</div>
+          <h4>Launch & Support</h4>
+          <p>Website online, siap dipakai. Ada support untuk bug fix & bantuan minor setelah live.</p>
+        </div>
+      </div>
+    </section>
 
     <section id="paket" class="pricing">
       <div class="sectionHead">
@@ -676,27 +659,27 @@
       <div class="sectionHead">
         <div>
           <h2>Portofolio</h2>
-          <p>Ganti dengan contoh project kamu.</p>
+          <p>Klik gambar untuk lihat lebih besar.</p>
         </div>
       </div>
 
       <div class="grid3">
         <div class="card item">
-          <div class="thumb">
+          <div class="thumb" data-title="Landing Page Klinik" data-src="porto1.png">
             <img src="porto1.png" alt="Portofolio Landing Page Klinik">
           </div>
           <h4>Landing Page Klinik</h4>
           <p>Fokus booking & WhatsApp CTA.</p>
         </div>
         <div class="card item">
-          <div class="thumb">
+          <div class="thumb" data-title="Company Profile" data-src="porto2.png">
             <img src="porto2.png" alt="Portofolio Company Profile">
           </div>
           <h4>Company Profile</h4>
           <p>Tampilan profesional + SEO dasar.</p>
         </div>
         <div class="card item">
-          <div class="thumb">
+          <div class="thumb" data-title="Katalog Produk" data-src="porto3.png">
             <img src="porto3.png" alt="Portofolio Katalog Produk">
           </div>
           <h4>Katalog Produk</h4>
@@ -901,6 +884,23 @@
     </footer>
   </div>
 
+  <!-- Sticky CTA Mobile (TAMBAHAN) -->
+  <div class="stickyCta">
+    <a class="primary" href="javascript:void(0)" onclick="openWAQuick()">Konsultasi WA</a>
+    <a href="#paket">Lihat Paket</a>
+  </div>
+
+  <!-- Modal Portfolio (TAMBAHAN) -->
+  <div class="modal" id="portoModal" aria-hidden="true">
+    <div class="modalBox" role="dialog" aria-modal="true">
+      <div class="modalTop">
+        <b id="portoModalTitle">Preview</b>
+        <button class="modalClose" type="button" onclick="closeModal()">Tutup ✕</button>
+      </div>
+      <img id="portoModalImg" class="modalImg" src="" alt="Preview Portofolio" />
+    </div>
+  </div>
+
   <button class="waFloat" onclick="openWAQuick()">Konsultasi WhatsApp</button>
 
   <script>
@@ -952,6 +952,45 @@
       const data = Object.fromEntries(fd.entries());
       const msg = buildMessage(data);
       openWA(msg);
+    });
+
+    /* ===============================
+       TAMBAHAN: MODAL PORTOFOLIO
+       =============================== */
+    const modal = document.getElementById("portoModal");
+    const modalImg = document.getElementById("portoModalImg");
+    const modalTitle = document.getElementById("portoModalTitle");
+
+    function openModal(src, title){
+      modalImg.src = src;
+      modalTitle.textContent = title || "Preview";
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal(){
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+      modalImg.src = "";
+      document.body.style.overflow = "";
+    }
+
+    // Klik gambar portfolio untuk zoom
+    document.querySelectorAll(".thumb[data-src]").forEach(el=>{
+      el.addEventListener("click", ()=>{
+        openModal(el.getAttribute("data-src"), el.getAttribute("data-title"));
+      });
+    });
+
+    // Tutup modal kalau klik area gelap
+    modal.addEventListener("click", (e)=>{
+      if(e.target === modal) closeModal();
+    });
+
+    // Tutup modal pakai ESC
+    document.addEventListener("keydown", (e)=>{
+      if(e.key === "Escape" && modal.classList.contains("open")) closeModal();
     });
   </script>
 </body>
