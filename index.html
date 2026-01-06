@@ -6,9 +6,7 @@
   <title>Jasa Pembuatan Website | Pesan Cepat via WhatsApp</title>
   <meta name="description" content="Jasa pembuatan website cepat, rapi, dan siap jualan. Pilih paket, isi form, langsung order via WhatsApp." />
 
-  <!-- ===============================
-       SEO SHARE (TAMBAHAN SAJA)
-       =============================== -->
+  <!-- SEO SHARE (TAMBAHAN) -->
   <meta property="og:title" content="Jasa Pembuatan Website - SONAD" />
   <meta property="og:description" content="Website modern, mobile-friendly, dan SEO-ready. Konsultasi gratis via WhatsApp." />
   <meta property="og:type" content="website" />
@@ -36,7 +34,6 @@
       line-height:1.5;
     }
     a{color:inherit; text-decoration:none}
-    /* padding bawah ditambah supaya tombol WA tidak nutup konten */
     .wrap{max-width:var(--max); margin:0 auto; padding: 26px 18px 110px;}
 
     header{
@@ -146,11 +143,9 @@
       background: linear-gradient(135deg, rgba(106,166,255,.18), rgba(115,255,213,.12));
       display:flex; align-items:center; justify-content:center; color: rgba(232,238,255,.75);
       font-weight:800;
-      overflow:hidden; /* TAMBAHAN: biar gambar tidak keluar rounded */
-      cursor: zoom-in; /* TAMBAHAN: hint bisa diklik */
+      overflow:hidden;
+      cursor: zoom-in;
     }
-
-    /* TAMBAHAN: Portfolio pakai gambar */
     .thumb img{
       width:100%;
       height:100%;
@@ -158,7 +153,6 @@
       border-radius:14px;
       display:block;
     }
-
     .item h4{margin: 10px 0 4px}
     .item p{margin:0; color:var(--muted); font-size:13px}
     .faq .q{padding: 16px}
@@ -201,7 +195,7 @@
       nav{display:none}
     }
 
-    /* ====== PREMIUM POLISH (GABUNGAN) ====== */
+    /* PREMIUM POLISH */
     header{
       position: sticky;
       top: 0;
@@ -263,46 +257,10 @@
       .logo-img{ height: 38px; border-radius: 12px; }
     }
 
-    /* ===============================
-       MOBILE FRIENDLY IMPROVEMENTS
-       =============================== */
-    @media (max-width: 600px){
-      .wrap{ padding: 20px 14px 120px; }
-      header{ padding: 10px 0; }
-      .logo-img{ height: 34px; }
-      .brand{ font-size: 13px; }
-      .tagline{ font-size: 11px; }
-      .hero{ gap: 14px; }
-      .heroLeft{ padding: 20px; }
-      h1{ font-size: 26px; line-height: 1.2; }
-      .sub{ font-size: 14px; line-height: 1.5; }
-      .ctaRow{ gap: 10px; }
-      .btn{ width: 100%; padding: 14px 16px; font-size: 15px; }
-      .kpis{ grid-template-columns: 1fr; gap: 8px; }
-      .kpi{ text-align: center; }
-      .heroRight{ padding: 16px; }
-      .mini{ padding: 14px; }
-      section{ margin-top: 22px; }
-      .sectionHead{ flex-direction: column; align-items: flex-start; gap: 6px; }
-      .sectionHead h2{ font-size: 18px; }
-      .sectionHead p{ font-size: 13px; }
-      .pricing .plan{ padding: 16px; }
-      .price{ font-size: 24px; }
-      .portfolio .item{ padding: 14px; }
-      .thumb{ height: 160px; }
-      .testimoni .plan{ padding: 16px; }
-      form{ padding: 16px; }
-      input, select, textarea{ font-size: 15px; padding: 14px; }
-      label{ font-size: 12px; }
-      .waFloat{ right: 14px; bottom: 14px; font-size: 14px; padding: 14px 18px; }
-    }
-
-    /* ======================================================
-       MOBILE UI UPGRADE (POLISHED) - TAMBAHAN SAJA
-       ====================================================== */
+    /* MOBILE IMPROVEMENTS */
     @media (max-width: 600px){
       :root{ --radius:16px; }
-      .wrap{ padding: 18px 14px 160px; } /* extra bawah untuk sticky CTA */
+      .wrap{ padding: 18px 14px 160px; }
 
       .hero{ gap: 12px; }
       .heroLeft{ padding: 18px; }
@@ -321,7 +279,6 @@
         max-width: 100%;
       }
 
-      /* CTA 2 kolom */
       .ctaRow{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -341,7 +298,6 @@
         font-size: 12px !important;
       }
 
-      /* KPI jadi 2 kolom */
       .kpis{
         grid-template-columns: 1fr 1fr;
         gap: 8px;
@@ -355,16 +311,15 @@
       .kpi b{ font-size: 16px; }
       .kpi span{ font-size: 11px; }
 
-      /* Portofolio lebih besar */
-      .thumb{
-        height: 190px;
-        border-radius: 16px;
-      }
-      .thumb img{
-        border-radius: 16px;
+      .thumb{ height: 190px; border-radius: 16px; }
+      .thumb img{ border-radius: 16px; }
+
+      input, select, textarea{
+        padding: 14px 14px;
+        font-size: 15px;
+        border-radius: 14px;
       }
 
-      /* WA float aman */
       .waFloat{
         right: 14px;
         bottom: calc(14px + env(safe-area-inset-bottom));
@@ -373,16 +328,13 @@
         border-radius: 999px;
       }
     }
-
     @media (max-width: 380px){
       .ctaRow{ grid-template-columns: 1fr; }
       .kpis{ grid-template-columns: 1fr; }
       h1{ font-size: 24px; }
     }
 
-    /* ===============================
-       TAMBAHAN: FAST RESPONSE BADGE
-       =============================== */
+    /* FAST RESPONSE BADGE */
     .fastBadge{
       margin-top: 10px;
       display:inline-flex;
@@ -396,12 +348,8 @@
       font-size: 12px;
     }
 
-    /* ===============================
-       TAMBAHAN: SECTION PROSES KERJA
-       =============================== */
-    .steps .step{
-      padding: 16px;
-    }
+    /* PROSES KERJA */
+    .steps .step{ padding: 16px; }
     .stepNum{
       display:inline-flex;
       width:30px;height:30px;
@@ -416,9 +364,51 @@
     .step h4{margin: 6px 0 6px}
     .step p{margin:0;color:var(--muted);font-size:13px}
 
-    /* ===============================
-       TAMBAHAN: MODAL PORTOFOLIO
-       =============================== */
+    /* ===== TAMBAHAN: GARANSI / TRUST ===== */
+    .trust .item{ padding: 16px; }
+    .trustIcon{
+      width:34px;height:34px;border-radius:12px;
+      display:inline-flex;align-items:center;justify-content:center;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.10);
+      margin-bottom:10px;
+      font-weight:900;
+    }
+    .trust h4{ margin: 6px 0 6px; }
+    .trust p{ margin:0;color:var(--muted);font-size:13px; }
+
+    /* ===== TAMBAHAN: PROFIL ===== */
+    .aboutWrap{
+      display:grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 12px;
+      align-items: stretch;
+    }
+    .avatarBox{
+      padding: 18px;
+      display:flex;
+      gap: 12px;
+      align-items:center;
+    }
+    .avatar{
+      width:54px;height:54px;border-radius:16px;
+      background: linear-gradient(135deg, rgba(106,166,255,.35), rgba(115,255,213,.25));
+      border:1px solid rgba(255,255,255,.12);
+      display:flex;align-items:center;justify-content:center;
+      font-weight:900;color: rgba(232,238,255,.85);
+      flex: 0 0 auto;
+    }
+    .avatarMeta b{ display:block; font-size:14px; }
+    .avatarMeta span{ color: var(--muted); font-size:12px; }
+
+    .aboutText{ padding: 18px; }
+    .aboutText p{ margin: 8px 0 0; color: var(--muted); font-size: 13px; }
+
+    @media(max-width:900px){
+      .aboutWrap{ grid-template-columns: 1fr; }
+    }
+
+    /* MODAL PORTOFOLIO */
     .modal{
       position: fixed;
       inset: 0;
@@ -462,9 +452,7 @@
       display:block;
     }
 
-    /* ===============================
-       TAMBAHAN: STICKY CTA MOBILE
-       =============================== */
+    /* STICKY CTA MOBILE */
     .stickyCta{
       position: fixed;
       left: 12px;
@@ -491,7 +479,7 @@
     }
     @media (max-width: 600px){
       .stickyCta{ display:flex; }
-      .waFloat{ display:none; } /* biar ga double CTA */
+      .waFloat{ display:none; }
     }
   </style>
 </head>
@@ -526,7 +514,7 @@
 
         <div class="ctaRow">
           <a class="btn primary" href="#paket">Lihat Paket & Harga</a>
-          <a class="btn" href="#order">Konsultasi Gratis</a>
+          <a class="btn" href="#order">Minta Estimasi & Konsultasi</a>
           <p class="muted" style="margin-top:10px;font-size:13px">
           💬 Gratis konsultasi • Tidak ada biaya tersembunyi • Bisa tanya dulu
           </p>
@@ -557,9 +545,67 @@
       </div>
     </div>
 
-    <!-- ===============================
-         TAMBAHAN: PROSES KERJA
-         =============================== -->
+    <!-- PROFIL (TAMBAHAN) -->
+    <section id="tentang" class="about">
+      <div class="sectionHead">
+        <div>
+          <h2>Siapa di Balik SONAD?</h2>
+          <p>Biar kamu makin yakin sebelum mulai.</p>
+        </div>
+      </div>
+
+      <div class="aboutWrap">
+        <div class="card avatarBox">
+          <div class="avatar">AS</div>
+          <div class="avatarMeta">
+            <b>Andra Son</b>
+            <span>Web Developer • Fokus website bisnis & UMKM</span>
+            <div class="muted" style="margin-top:6px;font-size:12px">📍 Indonesia • Fast Response 08.00–22.00</div>
+          </div>
+        </div>
+
+        <div class="card aboutText">
+          <b>Tujuan saya sederhana:</b>
+          <p>Membuat website yang bukan hanya “cantik”, tapi benar-benar membantu bisnis kamu lebih dipercaya, lebih mudah dihubungi, dan lebih siap untuk promosi/iklan.</p>
+          <p>Kalau kamu masih bingung pilih paket, tinggal konsultasi — saya bantu arahkan yang paling cocok.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GARANSI / TRUST (TAMBAHAN) -->
+    <section id="garansi" class="trust">
+      <div class="sectionHead">
+        <div>
+          <h2>Garansi & Kepastian</h2>
+          <p>Biar kamu aman dan jelas dari awal.</p>
+        </div>
+        <div class="pill">✅ Transparan & jelas</div>
+      </div>
+
+      <div class="grid3">
+        <div class="card item">
+          <div class="trustIcon">🛡️</div>
+          <h4>Revisi sesuai paket</h4>
+          <p>Kamu bisa revisi sesuai ketentuan paket sampai website siap dipakai.</p>
+        </div>
+        <div class="card item">
+          <div class="trustIcon">📄</div>
+          <h4>Scope kerja jelas</h4>
+          <p>Fitur & halaman disepakati dari awal biar tidak ada biaya “tiba-tiba”.</p>
+        </div>
+        <div class="card item">
+          <div class="trustIcon">🤝</div>
+          <h4>Support setelah live</h4>
+          <p>Setelah website online, ada support untuk bug fix & bantuan minor.</p>
+        </div>
+      </div>
+
+      <p class="muted" style="margin-top:12px; font-size:13px">
+        Catatan: Perubahan besar / penambahan fitur baru di luar scope akan dihitung terpisah (project tambahan).
+      </p>
+    </section>
+
+    <!-- PROSES KERJA -->
     <section id="proses" class="steps">
       <div class="sectionHead">
         <div>
@@ -661,31 +707,68 @@
           <h2>Portofolio</h2>
           <p>Klik gambar untuk lihat lebih besar.</p>
         </div>
+        <div class="pill">📸 Real screenshot</div>
       </div>
 
       <div class="grid3">
         <div class="card item">
           <div class="thumb" data-title="Landing Page Klinik" data-src="porto1.png">
-            <img src="porto1.png" alt="Portofolio Landing Page Klinik">
+            <img src="porto1.png" loading="lazy" decoding="async" alt="Portofolio Landing Page Klinik">
           </div>
           <h4>Landing Page Klinik</h4>
           <p>Fokus booking & WhatsApp CTA.</p>
         </div>
         <div class="card item">
           <div class="thumb" data-title="Company Profile" data-src="porto2.png">
-            <img src="porto2.png" alt="Portofolio Company Profile">
+            <img src="porto2.png" loading="lazy" decoding="async" alt="Portofolio Company Profile">
           </div>
           <h4>Company Profile</h4>
           <p>Tampilan profesional + SEO dasar.</p>
         </div>
         <div class="card item">
           <div class="thumb" data-title="Katalog Produk" data-src="porto3.png">
-            <img src="porto3.png" alt="Portofolio Katalog Produk">
+            <img src="porto3.png" loading="lazy" decoding="async" alt="Portofolio Katalog Produk">
           </div>
           <h4>Katalog Produk</h4>
           <p>Katalog + checkout via WhatsApp.</p>
         </div>
       </div>
+
+      <!-- BUKTI SOSIAL (TAMBAHAN) -->
+      <div class="sectionHead" style="margin-top:18px">
+        <div>
+          <h2>Bukti Sosial</h2>
+          <p>Tambahkan screenshot chat/hasil kerja biar makin meyakinkan.</p>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div class="card item">
+          <div class="thumb" data-title="Testimoni / Chat WhatsApp" data-src="testi1.png">
+            <img src="testi1.png" loading="lazy" decoding="async" alt="Testimoni 1 (opsional)">
+          </div>
+          <h4>Testimoni / Chat</h4>
+          <p>Screenshot chat WA (sensor nama/nomor).</p>
+        </div>
+        <div class="card item">
+          <div class="thumb" data-title="Before - After / Hasil" data-src="testi2.png">
+            <img src="testi2.png" loading="lazy" decoding="async" alt="Testimoni 2 (opsional)">
+          </div>
+          <h4>Before - After</h4>
+          <p>Perbandingan sebelum/sesudah.</p>
+        </div>
+        <div class="card item">
+          <div class="thumb" data-title="Hasil Website / Review" data-src="testi3.png">
+            <img src="testi3.png" loading="lazy" decoding="async" alt="Testimoni 3 (opsional)">
+          </div>
+          <h4>Hasil / Review</h4>
+          <p>Screenshot review (Google/IG/WA).</p>
+        </div>
+      </div>
+
+      <p class="muted" style="margin-top:12px; font-size:13px">
+        Catatan: kalau kamu belum punya testi gambar, kamu bisa hapus 3 blok ini atau ganti dengan angka seperti “20+ website dibuat”.
+      </p>
     </section>
 
     <section id="testimoni" class="testimoni">
@@ -884,13 +967,13 @@
     </footer>
   </div>
 
-  <!-- Sticky CTA Mobile (TAMBAHAN) -->
+  <!-- Sticky CTA Mobile -->
   <div class="stickyCta">
     <a class="primary" href="javascript:void(0)" onclick="openWAQuick()">Konsultasi WA</a>
     <a href="#paket">Lihat Paket</a>
   </div>
 
-  <!-- Modal Portfolio (TAMBAHAN) -->
+  <!-- Modal Portfolio -->
   <div class="modal" id="portoModal" aria-hidden="true">
     <div class="modalBox" role="dialog" aria-modal="true">
       <div class="modalTop">
@@ -904,8 +987,6 @@
   <button class="waFloat" onclick="openWAQuick()">Konsultasi WhatsApp</button>
 
   <script>
-    // TODO: ganti dengan nomor WA kamu (format internasional tanpa +)
-    // contoh Indonesia: 6281234567890
     const WA_TARGET = "6281234567890";
 
     document.getElementById("year").textContent = new Date().getFullYear();
@@ -954,9 +1035,7 @@
       openWA(msg);
     });
 
-    /* ===============================
-       TAMBAHAN: MODAL PORTOFOLIO
-       =============================== */
+    // MODAL PORTOFOLIO
     const modal = document.getElementById("portoModal");
     const modalImg = document.getElementById("portoModalImg");
     const modalTitle = document.getElementById("portoModalTitle");
@@ -976,19 +1055,16 @@
       document.body.style.overflow = "";
     }
 
-    // Klik gambar portfolio untuk zoom
     document.querySelectorAll(".thumb[data-src]").forEach(el=>{
       el.addEventListener("click", ()=>{
         openModal(el.getAttribute("data-src"), el.getAttribute("data-title"));
       });
     });
 
-    // Tutup modal kalau klik area gelap
     modal.addEventListener("click", (e)=>{
       if(e.target === modal) closeModal();
     });
 
-    // Tutup modal pakai ESC
     document.addEventListener("keydown", (e)=>{
       if(e.key === "Escape" && modal.classList.contains("open")) closeModal();
     });
