@@ -432,6 +432,48 @@
       margin:0;
     }
 
+    /* SOP + TIMELINE (TAMBAHAN) */
+    .sop .box{ padding: 16px; }
+    .sopRow{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .sopList{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .timeline{
+      display:grid;
+      gap:10px;
+      margin-top:10px;
+    }
+    .tItem{
+      padding: 12px 14px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+    }
+    .tItem b{ display:block; font-size:13px; }
+    .tItem span{ color: var(--muted); font-size:12px; }
+    .invTag{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      margin-top:10px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      font-size:12px;
+    }
+    @media (max-width: 900px){
+      .sopRow{ grid-template-columns: 1fr; }
+    }
+
     /* MODAL PORTOFOLIO */
     .modal{
       position: fixed;
@@ -657,6 +699,79 @@
       </div>
     </section>
 
+    <!-- SOP + INVOICE + TIMELINE (TAMBAHAN) -->
+    <section id="sop" class="sop">
+      <div class="sectionHead">
+        <div>
+          <h2>SOP Kerja + Invoice + Timeline</h2>
+          <p>Format kerja rapi untuk klien bisnis / corporate.</p>
+        </div>
+        <div class="pill">📑 Profesional</div>
+      </div>
+
+      <div class="sopRow">
+        <div class="card box">
+          <h3 style="margin:0 0 6px">✅ SOP Kerja</h3>
+          <div class="muted" style="font-size:13px">Biar project jelas, rapi, dan enak dipantau.</div>
+          <ul class="sopList">
+            <li>Brief & scope disepakati (fitur, halaman, target).</li>
+            <li>Materi dari klien: logo, teks, foto (atau kami bantu arahkan).</li>
+            <li>Desain UI/UX → approval (revisi sesuai paket).</li>
+            <li>Development → testing di link demo.</li>
+            <li>Go-live (publish) + handover (panduan singkat).</li>
+          </ul>
+
+          <div class="invTag">📌 Output: link demo + revisi terjadwal</div>
+        </div>
+
+        <div class="card box">
+          <h3 style="margin:0 0 6px">🧾 Invoice & Termin</h3>
+          <div class="muted" style="font-size:13px">Bisa pakai invoice resmi & termin untuk perusahaan.</div>
+
+          <div class="timeline">
+            <div class="tItem">
+              <b>Termin 1 — DP 50%</b>
+              <span>Mulai kerja setelah DP + brief disepakati.</span>
+            </div>
+            <div class="tItem">
+              <b>Termin 2 — 50% setelah demo</b>
+              <span>Pelunasan setelah website demo disetujui sebelum publish.</span>
+            </div>
+            <div class="tItem">
+              <b>Invoice & Dokumen</b>
+              <span>Invoice, rincian scope, dan timeline bisa disiapkan.</span>
+            </div>
+          </div>
+
+          <div class="invTag">🏦 Transfer/Invoice • Untuk perusahaan bisa dicantumkan detail legal</div>
+        </div>
+      </div>
+
+      <div class="card box" style="margin-top:12px">
+        <h3 style="margin:0 0 6px">⏱️ Timeline Estimasi (Standar)</h3>
+        <div class="muted" style="font-size:13px">Estimasi bisa menyesuaikan kompleksitas & kesiapan materi.</div>
+
+        <div class="grid3" style="margin-top:12px">
+          <div class="tItem">
+            <b>Hari 1</b>
+            <span>Brief, scope, pengumpulan materi.</span>
+          </div>
+          <div class="tItem">
+            <b>Hari 2–3</b>
+            <span>Desain UI/UX + revisi (approval).</span>
+          </div>
+          <div class="tItem">
+            <b>Hari 4–7</b>
+            <span>Development + testing + demo + go-live.</span>
+          </div>
+        </div>
+
+        <p class="muted" style="margin-top:12px; font-size:13px">
+          Catatan: Untuk paket Premium (Full Custom), timeline biasanya dibuat khusus per modul/fitur (milestone).
+        </p>
+      </div>
+    </section>
+
     <section id="paket" class="pricing">
       <div class="sectionHead">
         <div>
@@ -759,7 +874,6 @@
       </div>
     </section>
 
-    <!-- BUKTI SOSIAL (TANPA TESTI WA) -->
     <section id="bukti" class="socialProof">
       <div class="sectionHead">
         <div>
@@ -807,35 +921,6 @@
       <p class="muted" style="margin-top:12px; font-size:13px">
         Nanti kalau sudah ada testimoni WA, bagian ini bisa diganti jadi screenshot chat/feedback.
       </p>
-    </section>
-
-    <section id="testimoni" class="testimoni">
-      <div class="sectionHead">
-        <div>
-          <h2>Testimoni</h2>
-          <p>Beberapa feedback dari klien (contoh).</p>
-        </div>
-      </div>
-
-      <div class="grid3">
-        <div class="card plan">
-          <h3>⭐⭐⭐⭐⭐</h3>
-          <div class="muted">“Respons cepat, desain rapi, dan hasilnya sesuai request.”</div>
-          <p class="muted" style="margin-top:10px">— Rina, UMKM Kuliner</p>
-        </div>
-
-        <div class="card plan">
-          <h3>⭐⭐⭐⭐⭐</h3>
-          <div class="muted">“Website jadi lebih dipercaya, customer makin sering chat WA.”</div>
-          <p class="muted" style="margin-top:10px">— Dimas, Jasa Interior</p>
-        </div>
-
-        <div class="card plan">
-          <h3>⭐⭐⭐⭐⭐</h3>
-          <div class="muted">“Pengerjaan cepat, komunikatif, dan after sales oke.”</div>
-          <p class="muted" style="margin-top:10px">— Sari, Personal Brand</p>
-        </div>
-      </div>
     </section>
 
     <section id="faq" class="faq">
@@ -993,6 +1078,13 @@
             <option value="Premium Care - Rp 1,2jt/bulan">Premium Care - Rp 1,2jt/bulan</option>
           </select>
 
+          <!-- TAMBAHAN: PAYMENT / INVOICE -->
+          <label>Metode Pembayaran</label>
+          <select name="payment">
+            <option value="Transfer (tanpa invoice)">Transfer (tanpa invoice)</option>
+            <option value="Transfer + Invoice (untuk perusahaan)">Transfer + Invoice (untuk perusahaan)</option>
+          </select>
+
           <button class="btn primary" type="submit">Kirim via WhatsApp</button>
           <div class="note">* Setelah klik, WhatsApp akan terbuka (web/app). Pastikan nomor WA tujuan sudah kamu set di script.</div>
         </form>
@@ -1048,6 +1140,7 @@
         "Budget: " + (data.budget || "-"),
         "Domain/Hosting: " + (data.infra || "-"),
         "Maintenance: " + (data.maintenance || "-"),
+        "Metode Pembayaran: " + (data.payment || "-"),
         "",
         "Kebutuhan:",
         (data.kebutuhan || "-"),
@@ -1062,7 +1155,7 @@
     }
 
     function openWAQuick(){
-      openWA("Halo, saya ingin konsultasi pembuatan website.");
+      openWA("Halo, saya ingin konsultasi pembuatan website. Bisa minta SOP kerja + timeline + invoice?");
     }
 
     document.getElementById("orderForm").addEventListener("submit", (e)=>{
