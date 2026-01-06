@@ -364,7 +364,7 @@
     .step h4{margin: 6px 0 6px}
     .step p{margin:0;color:var(--muted);font-size:13px}
 
-    /* ===== TAMBAHAN: GARANSI / TRUST ===== */
+    /* GARANSI / TRUST */
     .trust .item{ padding: 16px; }
     .trustIcon{
       width:34px;height:34px;border-radius:12px;
@@ -377,7 +377,7 @@
     .trust h4{ margin: 6px 0 6px; }
     .trust p{ margin:0;color:var(--muted);font-size:13px; }
 
-    /* ===== TAMBAHAN: PROFIL ===== */
+    /* PROFIL */
     .aboutWrap{
       display:grid;
       grid-template-columns: .9fr 1.1fr;
@@ -406,6 +406,30 @@
 
     @media(max-width:900px){
       .aboutWrap{ grid-template-columns: 1fr; }
+    }
+
+    /* BUKTI SOSIAL (TANPA GAMBAR) */
+    .socialProof .proofCard{ padding: 16px; }
+    .proofTop{
+      display:flex; align-items:center; gap:10px;
+      margin-bottom: 8px;
+    }
+    .proofBadge{
+      width:34px;height:34px;border-radius:12px;
+      display:flex;align-items:center;justify-content:center;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.10);
+      font-weight:900;
+    }
+    .proofBig{
+      font-size: 18px;
+      font-weight: 900;
+      margin: 6px 0 2px;
+    }
+    .proofSmall{
+      color: var(--muted);
+      font-size: 13px;
+      margin:0;
     }
 
     /* MODAL PORTOFOLIO */
@@ -508,15 +532,15 @@
         <span class="pill">⚡ Cepat • Mobile-friendly • SEO-ready</span>
         <h1>Website Profesional untuk<br/>Kembangkan Bisnis Kamu</h1>
         <p class="sub">
-        Desain modern, mobile-friendly, dan SEO-ready.
-        Website langsung online dalam <b>3–7 hari</b> dan siap bantu kembangkan bisnis kamu ke era modern.
+          Desain modern, mobile-friendly, dan SEO-ready.
+          Website langsung online dalam <b>3–7 hari</b> dan siap bantu kembangkan bisnis kamu ke era modern.
         </p>
 
         <div class="ctaRow">
           <a class="btn primary" href="#paket">Lihat Paket & Harga</a>
           <a class="btn" href="#order">Minta Estimasi & Konsultasi</a>
           <p class="muted" style="margin-top:10px;font-size:13px">
-          💬 Gratis konsultasi • Tidak ada biaya tersembunyi • Bisa tanya dulu
+            💬 Gratis konsultasi • Tidak ada biaya tersembunyi • Bisa tanya dulu
           </p>
         </div>
 
@@ -545,7 +569,7 @@
       </div>
     </div>
 
-    <!-- PROFIL (TAMBAHAN) -->
+    <!-- PROFIL -->
     <section id="tentang" class="about">
       <div class="sectionHead">
         <div>
@@ -572,7 +596,7 @@
       </div>
     </section>
 
-    <!-- GARANSI / TRUST (TAMBAHAN) -->
+    <!-- GARANSI / TRUST -->
     <section id="garansi" class="trust">
       <div class="sectionHead">
         <div>
@@ -733,41 +757,55 @@
           <p>Katalog + checkout via WhatsApp.</p>
         </div>
       </div>
+    </section>
 
-      <!-- BUKTI SOSIAL (TAMBAHAN) -->
-      <div class="sectionHead" style="margin-top:18px">
+    <!-- BUKTI SOSIAL (TANPA TESTI WA) -->
+    <section id="bukti" class="socialProof">
+      <div class="sectionHead">
         <div>
           <h2>Bukti Sosial</h2>
-          <p>Tambahkan screenshot chat/hasil kerja biar makin meyakinkan.</p>
+          <p>Belum ada testimoni? Ini “trust builder” yang tetap meyakinkan.</p>
         </div>
+        <div class="pill">⭐ Siap diganti nanti</div>
       </div>
 
       <div class="grid3">
-        <div class="card item">
-          <div class="thumb" data-title="Testimoni / Chat WhatsApp" data-src="testi1.png">
-            <img src="testi1.png" loading="lazy" decoding="async" alt="Testimoni 1 (opsional)">
+        <div class="card proofCard">
+          <div class="proofTop">
+            <div class="proofBadge">⚡</div>
+            <div>
+              <div class="proofBig">Fast Response</div>
+              <p class="proofSmall">Balas cepat 08.00–22.00 WIB</p>
+            </div>
           </div>
-          <h4>Testimoni / Chat</h4>
-          <p>Screenshot chat WA (sensor nama/nomor).</p>
+          <p class="muted" style="margin:0;font-size:13px">Cocok untuk kamu yang butuh cepat diskusi & eksekusi.</p>
         </div>
-        <div class="card item">
-          <div class="thumb" data-title="Before - After / Hasil" data-src="testi2.png">
-            <img src="testi2.png" loading="lazy" decoding="async" alt="Testimoni 2 (opsional)">
+
+        <div class="card proofCard">
+          <div class="proofTop">
+            <div class="proofBadge">✅</div>
+            <div>
+              <div class="proofBig">Proses jelas</div>
+              <p class="proofSmall">Brief → desain → live</p>
+            </div>
           </div>
-          <h4>Before - After</h4>
-          <p>Perbandingan sebelum/sesudah.</p>
+          <p class="muted" style="margin:0;font-size:13px">Scope kerja disepakati dari awal biar aman.</p>
         </div>
-        <div class="card item">
-          <div class="thumb" data-title="Hasil Website / Review" data-src="testi3.png">
-            <img src="testi3.png" loading="lazy" decoding="async" alt="Testimoni 3 (opsional)">
+
+        <div class="card proofCard">
+          <div class="proofTop">
+            <div class="proofBadge">🛡️</div>
+            <div>
+              <div class="proofBig">Support setelah live</div>
+              <p class="proofSmall">Bug fix & bantuan minor</p>
+            </div>
           </div>
-          <h4>Hasil / Review</h4>
-          <p>Screenshot review (Google/IG/WA).</p>
+          <p class="muted" style="margin:0;font-size:13px">Ada pendampingan setelah website online.</p>
         </div>
       </div>
 
       <p class="muted" style="margin-top:12px; font-size:13px">
-        Catatan: kalau kamu belum punya testi gambar, kamu bisa hapus 3 blok ini atau ganti dengan angka seperti “20+ website dibuat”.
+        Nanti kalau sudah ada testimoni WA, bagian ini bisa diganti jadi screenshot chat/feedback.
       </p>
     </section>
 
@@ -893,8 +931,8 @@
         <div>
           <h2>Konsultasi Gratis</h2>
           <p>
-          Ceritakan kebutuhan website kamu. Kami bantu rekomendasikan paket terbaik
-          (tanpa kewajiban order).
+            Ceritakan kebutuhan website kamu. Kami bantu rekomendasikan paket terbaik
+            (tanpa kewajiban order).
           </p>
         </div>
       </div>
