@@ -6,11 +6,6 @@
   <title>Jasa Pembuatan Website | Pesan Cepat via WhatsApp</title>
   <meta name="description" content="Jasa pembuatan website cepat, rapi, dan siap jualan. Pilih paket, isi form, langsung order via WhatsApp." />
 
-  <!-- SEO SHARE (TAMBAHAN) -->
-  <meta property="og:title" content="Jasa Pembuatan Website - SONAD" />
-  <meta property="og:description" content="Website modern, mobile-friendly, dan SEO-ready. Konsultasi gratis via WhatsApp." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="logo.png" />
   <meta name="theme-color" content="#0b1020" />
   <link rel="icon" href="favicon.png" />
 
@@ -24,16 +19,44 @@
       --pad:22px;
     }
     *{box-sizing:border-box}
+
+    /* =========================================================
+       BACKGROUND BARU (GAMBAR + OVERLAY) + PREMIUM GLOW
+       ========================================================= */
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      background: radial-gradient(1200px 600px at 20% 0%, rgba(106,166,255,.25), transparent 60%),
-                  radial-gradient(900px 500px at 80% 10%, rgba(115,255,213,.18), transparent 55%),
-                  var(--bg);
       color:var(--text);
       line-height:1.5;
+
+      /* Background gambar (GANTI FILE-NYA kalau beda) */
+      background-image:
+        radial-gradient(1200px 600px at 20% 0%, rgba(106,166,255,.22), transparent 60%),
+        radial-gradient(900px 500px at 80% 10%, rgba(115,255,213,.16), transparent 55%),
+        url("bg.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
     }
+
+    /* Lapisan gelap biar teks kebaca + efek blur halus */
+    body::before{
+      content:"";
+      position: fixed;
+      inset: 0;
+      pointer-events:none;
+      z-index: -1;
+      background:
+        linear-gradient(to bottom, rgba(11,16,32,.88), rgba(11,16,32,.92)),
+        radial-gradient(900px 500px at 20% 10%, rgba(106,166,255,.18), transparent 60%),
+        radial-gradient(800px 520px at 80% 20%, rgba(115,255,213,.12), transparent 60%);
+      backdrop-filter: blur(2px);
+    }
+
     a{color:inherit; text-decoration:none}
+
+    /* padding bawah ditambah supaya tombol WA tidak nutup konten */
     .wrap{max-width:var(--max); margin:0 auto; padding: 26px 18px 110px;}
 
     header{
@@ -82,6 +105,13 @@
       box-shadow: var(--shadow);
       backdrop-filter: blur(10px);
     }
+
+    /* Sedikit “polish” biar card makin premium */
+    .card{
+      background: rgba(18,26,51,.68);
+      border: 1px solid rgba(255,255,255,.10);
+    }
+
     .heroLeft{padding: 28px}
     h1{font-size: 38px; margin:0 0 10px; line-height:1.15}
     .sub{color:var(--muted); font-size:16px; margin:0 0 18px}
@@ -95,13 +125,19 @@
       color:var(--text);
       cursor:pointer;
       font-weight:650;
+      transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
     }
     .btn.primary{
       border-color: transparent;
       background: linear-gradient(135deg, var(--brand), var(--brand2));
       color:#061022;
+      box-shadow: 0 14px 34px rgba(106,166,255,.18);
     }
-    .btn:hover{transform: translateY(-1px)}
+    .btn:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(0,0,0,.25);
+    }
+
     .kpis{
       display:grid; grid-template-columns: repeat(3, 1fr); gap:10px;
       margin-top: 18px;
@@ -152,7 +188,11 @@
       object-fit:cover;
       border-radius:14px;
       display:block;
+      transform: scale(1.02);
+      transition: transform .18s ease;
     }
+    .thumb:hover img{ transform: scale(1.06); }
+
     .item h4{margin: 10px 0 4px}
     .item p{margin:0; color:var(--muted); font-size:13px}
     .faq .q{padding: 16px}
@@ -178,46 +218,7 @@
     textarea{min-height: 96px; resize: vertical}
     .row{display:grid; grid-template-columns: 1fr 1fr; gap:12px}
     .note{font-size:12px; color:var(--muted); margin-top: 8px}
-
-    footer{
-      margin-top: 24px;
-      padding-top: 18px;
-      color:var(--muted);
-      font-size:12px;
-      border-top:1px solid var(--border)
-    }
-
-    /* ====== LEGAL / FOOTER SERIOUS ====== */
-    .footerGrid{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 12px;
-      margin-top: 12px;
-    }
-    .footerCard{
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-      border-radius: 14px;
-      padding: 14px;
-    }
-    .footerCard b{ color: var(--text); }
-    .footerLinks{
-      display:flex; flex-wrap:wrap; gap:10px;
-      margin-top: 8px;
-    }
-    .footerLinks a{
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.02);
-      color: var(--muted);
-    }
-    .footerLinks a:hover{ color: var(--text); border-color: rgba(255,255,255,.18); }
-    .tiny{ font-size: 11px; color: rgba(147,164,199,.9); line-height: 1.55; margin: 8px 0 0; }
-    @media(max-width:900px){
-      .footerGrid{ grid-template-columns: 1fr; }
-    }
-
+    footer{margin-top: 24px; padding-top: 18px; color:var(--muted); font-size:12px; border-top:1px solid var(--border)}
     .waFloat{
       position:fixed; right:18px; bottom:18px;
       padding: 12px 14px; border-radius:999px;
@@ -227,14 +228,14 @@
     }
     @media (max-width: 900px){
       .hero{grid-template-columns: 1fr}
-      .grid3{grid-template-columns: 1 fr}
+      .grid3{grid-template-columns: 1fr}
       .grid2{grid-template-columns: 1fr}
       .row{grid-template-columns: 1fr}
       h1{font-size: 32px}
       nav{display:none}
     }
 
-    /* PREMIUM POLISH */
+    /* ====== PREMIUM POLISH (GABUNGAN) ====== */
     header{
       position: sticky;
       top: 0;
@@ -258,21 +259,6 @@
     h1{ letter-spacing: -0.6px; }
     .sub{ max-width: 52ch; font-size: 16px; }
 
-    .btn{
-      transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
-    }
-    .btn:hover{
-      transform: translateY(-2px);
-      box-shadow: 0 14px 30px rgba(0,0,0,.25);
-    }
-    .btn.primary{
-      box-shadow: 0 14px 34px rgba(106,166,255,.18);
-    }
-
-    .card{
-      background: rgba(18,26,51,.68);
-      border: 1px solid rgba(255,255,255,.10);
-    }
     .plan{
       display:flex;
       flex-direction: column;
@@ -288,223 +274,141 @@
       border-radius: 999px;
     }
 
-    /* MOBILE IMPROVEMENTS */
+    @media (max-width: 900px){
+      header{ padding: 12px 0; }
+      .heroLeft{ padding: 22px; }
+      h1{ font-size: 30px; }
+      .sub{ font-size: 15px; }
+      .logo-img{ height: 38px; border-radius: 12px; }
+    }
+
+    /* ===============================
+       MOBILE FRIENDLY IMPROVEMENTS
+       =============================== */
     @media (max-width: 600px){
       :root{ --radius:16px; }
-      .wrap{ padding: 18px 14px 160px; }
 
-      .hero{ gap: 12px; }
-      .heroLeft{ padding: 18px; }
+      .wrap{
+        padding: 20px 14px 120px;
+      }
+
+      header{
+        padding: 10px 0;
+      }
+
+      .logo-img{
+        height: 34px;
+      }
+
+      .brand{
+        font-size: 13px;
+      }
+
+      .tagline{
+        font-size: 11px;
+      }
+
+      .hero{
+        gap: 14px;
+      }
+
+      .heroLeft{
+        padding: 20px;
+      }
 
       h1{
         font-size: 26px;
-        line-height: 1.15;
-        letter-spacing: -0.4px;
-        margin-bottom: 10px;
+        line-height: 1.2;
       }
 
       .sub{
         font-size: 14px;
-        line-height: 1.55;
-        margin-bottom: 14px;
-        max-width: 100%;
+        line-height: 1.5;
       }
 
       .ctaRow{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
         gap: 10px;
-        align-items: stretch;
       }
-      .ctaRow .btn{
+
+      .btn{
         width: 100%;
-        padding: 14px 14px;
-        font-size: 14px;
-        border-radius: 14px;
-        min-height: 48px;
-      }
-      .ctaRow p{
-        grid-column: 1 / -1;
-        margin: 6px 0 0 !important;
-        font-size: 12px !important;
+        padding: 14px 16px;
+        font-size: 15px;
       }
 
       .kpis{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 8px;
-        margin-top: 14px;
       }
-      .kpi{
-        padding: 10px 10px;
-        border-radius: 14px;
-        text-align: left;
-      }
-      .kpi b{ font-size: 16px; }
-      .kpi span{ font-size: 11px; }
 
-      .thumb{ height: 190px; border-radius: 16px; }
-      .thumb img{ border-radius: 16px; }
+      .kpi{
+        text-align: center;
+      }
+
+      .heroRight{
+        padding: 16px;
+      }
+
+      .mini{
+        padding: 14px;
+      }
+
+      section{
+        margin-top: 22px;
+      }
+
+      .sectionHead{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+      }
+
+      .sectionHead h2{
+        font-size: 18px;
+      }
+
+      .sectionHead p{
+        font-size: 13px;
+      }
+
+      .pricing .plan{
+        padding: 16px;
+      }
+
+      .price{
+        font-size: 24px;
+      }
+
+      .portfolio .item{
+        padding: 14px;
+      }
+
+      .thumb{
+        height: 190px;
+      }
+
+      form{
+        padding: 16px;
+      }
 
       input, select, textarea{
-        padding: 14px 14px;
         font-size: 15px;
-        border-radius: 14px;
+        padding: 14px;
+      }
+
+      label{
+        font-size: 12px;
       }
 
       .waFloat{
         right: 14px;
-        bottom: calc(14px + env(safe-area-inset-bottom));
-        padding: 14px 18px;
+        bottom: 14px;
         font-size: 14px;
-        border-radius: 999px;
+        padding: 14px 18px;
       }
     }
-    @media (max-width: 380px){
-      .ctaRow{ grid-template-columns: 1fr; }
-      .kpis{ grid-template-columns: 1fr; }
-      h1{ font-size: 24px; }
-    }
 
-    .fastBadge{
-      margin-top: 10px;
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 10px;
-      border-radius: 999px;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.03);
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    /* PROSES KERJA */
-    .steps .step{ padding: 16px; }
-    .stepNum{
-      display:inline-flex;
-      width:30px;height:30px;
-      border-radius:999px;
-      align-items:center;
-      justify-content:center;
-      font-weight:900;
-      color:#061022;
-      background: linear-gradient(135deg, var(--brand), var(--brand2));
-      margin-bottom:10px;
-    }
-    .step h4{margin: 6px 0 6px}
-    .step p{margin:0;color:var(--muted);font-size:13px}
-
-    /* GARANSI / TRUST */
-    .trust .item{ padding: 16px; }
-    .trustIcon{
-      width:34px;height:34px;border-radius:12px;
-      display:inline-flex;align-items:center;justify-content:center;
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.10);
-      margin-bottom:10px;
-      font-weight:900;
-    }
-    .trust h4{ margin: 6px 0 6px; }
-    .trust p{ margin:0;color:var(--muted);font-size:13px; }
-
-    /* PROFIL */
-    .aboutWrap{
-      display:grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 12px;
-      align-items: stretch;
-    }
-    .avatarBox{
-      padding: 18px;
-      display:flex;
-      gap: 12px;
-      align-items:center;
-    }
-    .avatar{
-      width:54px;height:54px;border-radius:16px;
-      background: linear-gradient(135deg, rgba(106,166,255,.35), rgba(115,255,213,.25));
-      border:1px solid rgba(255,255,255,.12);
-      display:flex;align-items:center;justify-content:center;
-      font-weight:900;color: rgba(232,238,255,.85);
-      flex: 0 0 auto;
-    }
-    .avatarMeta b{ display:block; font-size:14px; }
-    .avatarMeta span{ color: var(--muted); font-size:12px; }
-
-    .aboutText{ padding: 18px; }
-    .aboutText p{ margin: 8px 0 0; color: var(--muted); font-size: 13px; }
-
-    @media(max-width:900px){
-      .aboutWrap{ grid-template-columns: 1fr; }
-    }
-
-    /* BUKTI SOSIAL (TANPA GAMBAR) */
-    .socialProof .proofCard{ padding: 16px; }
-    .proofTop{
-      display:flex; align-items:center; gap:10px;
-      margin-bottom: 8px;
-    }
-    .proofBadge{
-      width:34px;height:34px;border-radius:12px;
-      display:flex;align-items:center;justify-content:center;
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.10);
-      font-weight:900;
-    }
-    .proofBig{
-      font-size: 18px;
-      font-weight: 900;
-      margin: 6px 0 2px;
-    }
-    .proofSmall{
-      color: var(--muted);
-      font-size: 13px;
-      margin:0;
-    }
-
-    /* SOP + TIMELINE */
-    .sop .box{ padding: 16px; }
-    .sopRow{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-    .sopList{
-      margin: 10px 0 0;
-      padding-left: 18px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-    .timeline{
-      display:grid;
-      gap:10px;
-      margin-top:10px;
-    }
-    .tItem{
-      padding: 12px 14px;
-      border-radius: 14px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-    }
-    .tItem b{ display:block; font-size:13px; }
-    .tItem span{ color: var(--muted); font-size:12px; }
-    .invTag{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      margin-top:10px;
-      padding:8px 10px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.03);
-      color: var(--muted);
-      font-size:12px;
-    }
-    @media (max-width: 900px){
-      .sopRow{ grid-template-columns: 1fr; }
-    }
-
-    /* MODAL PORTOFOLIO */
+    /* Modal sederhana untuk preview portofolio (opsional tapi cantik) */
     .modal{
       position: fixed;
       inset: 0;
@@ -547,42 +451,6 @@
       height:auto;
       display:block;
     }
-
-    /* STICKY CTA MOBILE */
-    .stickyCta{
-      position: fixed;
-      left: 12px;
-      right: 12px;
-      bottom: calc(12px + env(safe-area-inset-bottom));
-      display: none;
-      gap: 10px;
-      z-index: 9998;
-    }
-    .stickyCta a{
-      flex:1;
-      border-radius: 14px;
-      padding: 14px 14px;
-      text-align:center;
-      font-weight: 900;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.06);
-      box-shadow: 0 16px 40px rgba(0,0,0,.35);
-    }
-    .stickyCta a.primary{
-      border:none;
-      background: linear-gradient(135deg, var(--brand), var(--brand2));
-      color:#061022;
-    }
-    @media (max-width: 600px){
-      .stickyCta{ display:flex; }
-      .waFloat{ display:none; }
-    }
-
-    /* LEGAL SECTION */
-    .legal .box{ padding: 16px; }
-    .legal p, .legal li{ font-size: 13px; color: var(--muted); }
-    .legal b{ color: var(--text); }
-    .legal ul{ margin: 10px 0 0; }
   </style>
 </head>
 
@@ -616,13 +484,11 @@
 
         <div class="ctaRow">
           <a class="btn primary" href="#paket">Lihat Paket & Harga</a>
-          <a class="btn" href="#order">Minta Estimasi & Konsultasi</a>
+          <a class="btn" href="#order">Konsultasi Gratis</a>
           <p class="muted" style="margin-top:10px;font-size:13px">
             💬 Gratis konsultasi • Tidak ada biaya tersembunyi • Bisa tanya dulu
           </p>
         </div>
-
-        <div class="fastBadge">⚡ Fast Response • 08.00–22.00 WIB</div>
 
         <div class="kpis">
           <div class="kpi"><b>3–7 hari</b><span>estimasi pengerjaan</span></div>
@@ -646,167 +512,6 @@
         </div>
       </div>
     </div>
-
-    <!-- PROFIL -->
-    <section id="tentang" class="about">
-      <div class="sectionHead">
-        <div>
-          <h2>Siapa di Balik SONAD?</h2>
-          <p>Biar kamu makin yakin sebelum mulai.</p>
-        </div>
-      </div>
-
-      <div class="aboutWrap">
-        <div class="card avatarBox">
-          <div class="avatar">AS</div>
-          <div class="avatarMeta">
-            <b>Andra Son</b>
-            <span>Web Developer • Fokus website bisnis & UMKM</span>
-            <div class="muted" style="margin-top:6px;font-size:12px">📍 Indonesia • Fast Response 08.00–22.00</div>
-          </div>
-        </div>
-
-        <div class="card aboutText">
-          <b>Tujuan saya sederhana:</b>
-          <p>Membuat website yang bukan hanya “cantik”, tapi benar-benar membantu bisnis kamu lebih dipercaya, lebih mudah dihubungi, dan lebih siap untuk promosi/iklan.</p>
-          <p>Kalau kamu masih bingung pilih paket, tinggal konsultasi — saya bantu arahkan yang paling cocok.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- GARANSI / TRUST -->
-    <section id="garansi" class="trust">
-      <div class="sectionHead">
-        <div>
-          <h2>Garansi & Kepastian</h2>
-          <p>Biar kamu aman dan jelas dari awal.</p>
-        </div>
-        <div class="pill">✅ Transparan & jelas</div>
-      </div>
-
-      <div class="grid3">
-        <div class="card item">
-          <div class="trustIcon">🛡️</div>
-          <h4>Revisi sesuai paket</h4>
-          <p>Kamu bisa revisi sesuai ketentuan paket sampai website siap dipakai.</p>
-        </div>
-        <div class="card item">
-          <div class="trustIcon">📄</div>
-          <h4>Scope kerja jelas</h4>
-          <p>Fitur & halaman disepakati dari awal biar tidak ada biaya “tiba-tiba”.</p>
-        </div>
-        <div class="card item">
-          <div class="trustIcon">🤝</div>
-          <h4>Support setelah live</h4>
-          <p>Setelah website online, ada support untuk bug fix & bantuan minor.</p>
-        </div>
-      </div>
-
-      <p class="muted" style="margin-top:12px; font-size:13px">
-        Catatan: Perubahan besar / penambahan fitur baru di luar scope akan dihitung terpisah (project tambahan).
-      </p>
-    </section>
-
-    <!-- PROSES KERJA -->
-    <section id="proses" class="steps">
-      <div class="sectionHead">
-        <div>
-          <h2>Proses Kerja</h2>
-          <p>Simple, cepat, dan transparan.</p>
-        </div>
-      </div>
-
-      <div class="grid3">
-        <div class="card step">
-          <div class="stepNum">1</div>
-          <h4>Konsultasi & Brief</h4>
-          <p>Kamu ceritakan kebutuhan + kirim referensi. Kami rekomendasikan paket & scope.</p>
-        </div>
-        <div class="card step">
-          <div class="stepNum">2</div>
-          <h4>Desain & Revisi</h4>
-          <p>Kami buat tampilan, kamu review. Revisi sesuai paket sampai siap lanjut develop.</p>
-        </div>
-        <div class="card step">
-          <div class="stepNum">3</div>
-          <h4>Launch & Support</h4>
-          <p>Website online, siap dipakai. Ada support untuk bug fix & bantuan minor setelah live.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOP + INVOICE + TIMELINE -->
-    <section id="sop" class="sop">
-      <div class="sectionHead">
-        <div>
-          <h2>SOP Kerja + Invoice + Timeline</h2>
-          <p>Format kerja rapi untuk klien bisnis / corporate.</p>
-        </div>
-        <div class="pill">📑 Profesional</div>
-      </div>
-
-      <div class="sopRow">
-        <div class="card box">
-          <h3 style="margin:0 0 6px">✅ SOP Kerja</h3>
-          <div class="muted" style="font-size:13px">Biar project jelas, rapi, dan enak dipantau.</div>
-          <ul class="sopList">
-            <li>Brief & scope disepakati (fitur, halaman, target).</li>
-            <li>Materi dari klien: logo, teks, foto (atau kami bantu arahkan).</li>
-            <li>Desain UI/UX → approval (revisi sesuai paket).</li>
-            <li>Development → testing di link demo.</li>
-            <li>Go-live (publish) + handover (panduan singkat).</li>
-          </ul>
-
-          <div class="invTag">📌 Output: link demo + revisi terjadwal</div>
-        </div>
-
-        <div class="card box">
-          <h3 style="margin:0 0 6px">🧾 Invoice & Termin</h3>
-          <div class="muted" style="font-size:13px">Bisa pakai invoice resmi & termin untuk perusahaan.</div>
-
-          <div class="timeline">
-            <div class="tItem">
-              <b>Termin 1 — DP 50%</b>
-              <span>Mulai kerja setelah DP + brief disepakati.</span>
-            </div>
-            <div class="tItem">
-              <b>Termin 2 — 50% setelah demo</b>
-              <span>Pelunasan setelah website demo disetujui sebelum publish.</span>
-            </div>
-            <div class="tItem">
-              <b>Invoice & Dokumen</b>
-              <span>Invoice, rincian scope, dan timeline bisa disiapkan.</span>
-            </div>
-          </div>
-
-          <div class="invTag">🏦 Transfer/Invoice • Untuk perusahaan bisa dicantumkan detail legal</div>
-        </div>
-      </div>
-
-      <div class="card box" style="margin-top:12px">
-        <h3 style="margin:0 0 6px">⏱️ Timeline Estimasi (Standar)</h3>
-        <div class="muted" style="font-size:13px">Estimasi bisa menyesuaikan kompleksitas & kesiapan materi.</div>
-
-        <div class="grid3" style="margin-top:12px">
-          <div class="tItem">
-            <b>Hari 1</b>
-            <span>Brief, scope, pengumpulan materi.</span>
-          </div>
-          <div class="tItem">
-            <b>Hari 2–3</b>
-            <span>Desain UI/UX + revisi (approval).</span>
-          </div>
-          <div class="tItem">
-            <b>Hari 4–7</b>
-            <span>Development + testing + demo + go-live.</span>
-          </div>
-        </div>
-
-        <p class="muted" style="margin-top:12px; font-size:13px">
-          Catatan: Untuk paket Premium (Full Custom), timeline biasanya dibuat khusus per modul/fitur (milestone).
-        </p>
-      </div>
-    </section>
 
     <section id="paket" class="pricing">
       <div class="sectionHead">
@@ -882,81 +587,31 @@
           <h2>Portofolio</h2>
           <p>Klik gambar untuk lihat lebih besar.</p>
         </div>
-        <div class="pill">📸 Real screenshot</div>
       </div>
 
       <div class="grid3">
         <div class="card item">
           <div class="thumb" data-title="Landing Page Klinik" data-src="porto1.png">
-            <img src="porto1.png" loading="lazy" decoding="async" alt="Portofolio Landing Page Klinik">
+            <img src="porto1.png" alt="Portofolio Landing Page Klinik" loading="lazy">
           </div>
           <h4>Landing Page Klinik</h4>
           <p>Fokus booking & WhatsApp CTA.</p>
         </div>
         <div class="card item">
           <div class="thumb" data-title="Company Profile" data-src="porto2.png">
-            <img src="porto2.png" loading="lazy" decoding="async" alt="Portofolio Company Profile">
+            <img src="porto2.png" alt="Portofolio Company Profile" loading="lazy">
           </div>
           <h4>Company Profile</h4>
           <p>Tampilan profesional + SEO dasar.</p>
         </div>
         <div class="card item">
           <div class="thumb" data-title="Katalog Produk" data-src="porto3.png">
-            <img src="porto3.png" loading="lazy" decoding="async" alt="Portofolio Katalog Produk">
+            <img src="porto3.png" alt="Portofolio Katalog Produk" loading="lazy">
           </div>
           <h4>Katalog Produk</h4>
           <p>Katalog + checkout via WhatsApp.</p>
         </div>
       </div>
-    </section>
-
-    <section id="bukti" class="socialProof">
-      <div class="sectionHead">
-        <div>
-          <h2>Bukti Sosial</h2>
-          <p>Belum ada testimoni? Ini “trust builder” yang tetap meyakinkan.</p>
-        </div>
-        <div class="pill">⭐ Siap diganti nanti</div>
-      </div>
-
-      <div class="grid3">
-        <div class="card proofCard">
-          <div class="proofTop">
-            <div class="proofBadge">⚡</div>
-            <div>
-              <div class="proofBig">Fast Response</div>
-              <p class="proofSmall">Balas cepat 08.00–22.00 WIB</p>
-            </div>
-          </div>
-          <p class="muted" style="margin:0;font-size:13px">Cocok untuk kamu yang butuh cepat diskusi & eksekusi.</p>
-        </div>
-
-        <div class="card proofCard">
-          <div class="proofTop">
-            <div class="proofBadge">✅</div>
-            <div>
-              <div class="proofBig">Proses jelas</div>
-              <p class="proofSmall">Brief → desain → live</p>
-            </div>
-          </div>
-          <p class="muted" style="margin:0;font-size:13px">Scope kerja disepakati dari awal biar aman.</p>
-        </div>
-
-        <div class="card proofCard">
-          <div class="proofTop">
-            <div class="proofBadge">🛡️</div>
-            <div>
-              <div class="proofBig">Support setelah live</div>
-              <p class="proofSmall">Bug fix & bantuan minor</p>
-            </div>
-          </div>
-          <p class="muted" style="margin:0;font-size:13px">Ada pendampingan setelah website online.</p>
-        </div>
-      </div>
-
-      <p class="muted" style="margin-top:12px; font-size:13px">
-        Nanti kalau sudah ada testimoni WA, bagian ini bisa diganti jadi screenshot chat/feedback.
-      </p>
     </section>
 
     <section id="faq" class="faq">
@@ -991,95 +646,6 @@
             <summary>Ada garansi?</summary>
             <p>Support 1 bulan untuk bug fix dan bantuan minor setelah website live.</p>
           </details>
-        </div>
-      </div>
-    </section>
-
-    <section id="maintenance" class="maintenance">
-      <div class="sectionHead">
-        <div>
-          <h2>Biaya Maintenance</h2>
-          <p>Pilih maintenance agar website tetap aman, cepat, dan terupdate.</p>
-        </div>
-        <div class="pill">🔧 Optional (tidak wajib)</div>
-      </div>
-
-      <div class="grid3">
-        <div class="card plan">
-          <h3>Basic Care</h3>
-          <div class="muted">Untuk website sederhana</div>
-          <div class="price">Rp 300.000<span style="font-size:14px; font-weight:700">/bulan</span></div>
-          <ul>
-            <li>Backup bulanan</li>
-            <li>Update minor (plugin/theme jika ada)</li>
-            <li>Monitoring uptime</li>
-            <li>Support chat (jam kerja)</li>
-          </ul>
-        </div>
-
-        <div class="card plan" style="outline:2px solid rgba(106,166,255,.35)">
-          <h3>Standard Care</h3>
-          <div class="muted">Paling cocok untuk bisnis</div>
-          <div class="price">Rp 600.000<span style="font-size:14px; font-weight:700">/bulan</span></div>
-          <ul>
-            <li>Backup mingguan</li>
-            <li>Security check + update rutin</li>
-            <li>Performa & basic SEO monitoring</li>
-            <li>Fix bug ringan (jika ada)</li>
-          </ul>
-        </div>
-
-        <div class="card plan">
-          <h3>Premium Care</h3>
-          <div class="muted">Untuk website custom & aktif</div>
-          <div class="price">Rp 1.200.000<span style="font-size:14px; font-weight:700">/bulan</span></div>
-          <ul>
-            <li>Backup harian</li>
-            <li>Prioritas support</li>
-            <li>Monitoring security & performa</li>
-            <li>Perubahan minor (content/update section) hingga 2 jam/bulan</li>
-          </ul>
-        </div>
-      </div>
-
-      <p class="muted" style="margin-top:12px; font-size:13px">
-        Catatan: Biaya maintenance tidak termasuk biaya domain/hosting (jika dibayar terpisah) dan tidak termasuk penambahan fitur besar (akan dihitung sebagai project baru).
-      </p>
-    </section>
-
-    <!-- LEGAL / PRIVACY / TERMS -->
-    <section id="legal" class="legal">
-      <div class="sectionHead">
-        <div>
-          <h2>Legal & Kebijakan</h2>
-          <p>Untuk kebutuhan bisnis, corporate, dan kerja sama profesional.</p>
-        </div>
-        <div class="pill">⚖️ Legal</div>
-      </div>
-
-      <div class="grid2">
-        <div class="card box">
-          <b>Privasi & Data</b>
-          <p class="muted" style="margin-top:8px">
-            Data yang kamu isi (nama, nomor WhatsApp, kebutuhan) hanya digunakan untuk komunikasi & proses penawaran.
-            Kami tidak menjual atau membagikan data ke pihak ketiga tanpa izin.
-          </p>
-          <ul>
-            <li>Data disimpan seperlunya untuk follow-up.</li>
-            <li>Kamu bisa minta penghapusan data kapan saja via WhatsApp.</li>
-          </ul>
-        </div>
-
-        <div class="card box">
-          <b>Syarat Singkat (Scope & Harga)</b>
-          <p class="muted" style="margin-top:8px">
-            Harga paket mengikuti scope standar. Tambahan fitur besar / perubahan scope setelah disepakati akan dihitung terpisah.
-            Timeline bisa berubah bila materi dari klien belum lengkap.
-          </p>
-          <ul>
-            <li>DP 50% untuk mulai, pelunasan setelah demo disetujui.</li>
-            <li>Domain/hosting biasanya terpisah (kecuali disepakati).</li>
-          </ul>
         </div>
       </div>
     </section>
@@ -1151,65 +717,19 @@
             <option value="Premium Care - Rp 1,2jt/bulan">Premium Care - Rp 1,2jt/bulan</option>
           </select>
 
-          <label>Metode Pembayaran</label>
-          <select name="payment">
-            <option value="Transfer (tanpa invoice)">Transfer (tanpa invoice)</option>
-            <option value="Transfer + Invoice (untuk perusahaan)">Transfer + Invoice (untuk perusahaan)</option>
-          </select>
-
           <button class="btn primary" type="submit">Kirim via WhatsApp</button>
-          <div class="note">
-            * Dengan mengirim form ini, kamu setuju data digunakan untuk proses penawaran (lihat <a href="#legal" style="text-decoration:underline">Legal & Kebijakan</a>).
-          </div>
+          <div class="note">* Setelah klik, WhatsApp akan terbuka (web/app). Pastikan nomor WA tujuan sudah kamu set di script.</div>
         </form>
       </div>
     </section>
 
     <footer>
-      <div class="footerGrid">
-        <div class="footerCard">
-          <b>SONAD — Web Development Company</b>
-          <div class="tiny">
-            <!-- GANTI INI -->
-            Email: <span style="color:var(--text)">admin@sonad.id</span> •
-            WhatsApp: <span style="color:var(--text)">+62 812-xxxx-xxxx</span> •
-            Domisili: <span style="color:var(--text)">Indonesia</span>
-          </div>
-          <div class="footerLinks">
-            <a href="#paket">Paket</a>
-            <a href="#porto">Portofolio</a>
-            <a href="#sop">SOP</a>
-            <a href="#maintenance">Maintenance</a>
-            <a href="#legal">Legal</a>
-            <a href="#order">Konsultasi</a>
-          </div>
-          <p class="tiny">
-            © <span id="year"></span> SONAD. All rights reserved.
-            <br/>Nama, logo, dan konten pada website ini dilindungi hak cipta dan tidak boleh digunakan tanpa izin tertulis.
-          </p>
-        </div>
-
-        <div class="footerCard">
-          <b>Catatan Profesional</b>
-          <p class="tiny" style="margin-top:8px">
-            Penawaran dapat disertai invoice & dokumen scope kerja. Untuk kebutuhan perusahaan/corporate,
-            kami dapat menyiapkan timeline & termin pembayaran sesuai kesepakatan.
-          </p>
-          <p class="tiny">
-            *Harga dapat berubah sesuai kompleksitas & kebutuhan fitur. Domain/hosting umumnya terpisah kecuali disepakati.
-          </p>
-        </div>
-      </div>
+      © <span id="year"></span> Studio Web • Dibuat untuk jualan jasa pembuatan website.
+      <div style="margin-top:6px">Kontak: <span class="muted">Ganti info ini sesuai brand kamu</span></div>
     </footer>
   </div>
 
-  <!-- Sticky CTA Mobile -->
-  <div class="stickyCta">
-    <a class="primary" href="javascript:void(0)" onclick="openWAQuick()">Konsultasi WA</a>
-    <a href="#paket">Lihat Paket</a>
-  </div>
-
-  <!-- Modal Portfolio -->
+  <!-- Modal Preview Portofolio -->
   <div class="modal" id="portoModal" aria-hidden="true">
     <div class="modalBox" role="dialog" aria-modal="true">
       <div class="modalTop">
@@ -1223,7 +743,7 @@
   <button class="waFloat" onclick="openWAQuick()">Konsultasi WhatsApp</button>
 
   <script>
-    const WA_TARGET = "6281234567890"; // GANTI INI
+    const WA_TARGET = "6281234567890";
 
     document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -1246,7 +766,6 @@
         "Budget: " + (data.budget || "-"),
         "Domain/Hosting: " + (data.infra || "-"),
         "Maintenance: " + (data.maintenance || "-"),
-        "Metode Pembayaran: " + (data.payment || "-"),
         "",
         "Kebutuhan:",
         (data.kebutuhan || "-"),
@@ -1261,7 +780,7 @@
     }
 
     function openWAQuick(){
-      openWA("Halo, saya ingin konsultasi pembuatan website. Bisa minta SOP kerja + timeline + invoice?");
+      openWA("Halo, saya ingin konsultasi pembuatan website.");
     }
 
     document.getElementById("orderForm").addEventListener("submit", (e)=>{
@@ -1272,7 +791,7 @@
       openWA(msg);
     });
 
-    // MODAL PORTOFOLIO
+    // Modal Portofolio
     const modal = document.getElementById("portoModal");
     const modalImg = document.getElementById("portoModalImg");
     const modalTitle = document.getElementById("portoModalTitle");
